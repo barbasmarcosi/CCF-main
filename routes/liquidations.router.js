@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs");
 const pdf = require("html-pdf");
 const LiquidationService = require("../services/liquidation.service");
 const validatorHandler = require("../middlewares/validator.handler");
@@ -34,16 +35,12 @@ router.get(
   }
 );
 
-router.post("/report/:id", async (req, res, next) => {
+router.get("/report/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const newLiquidation = await service.report(id);
-    console.log(newLiquidation)
-    pdf.create(newLiquidation).toStream((err, stream) => {
-      if (err) {
-        logger.error(">>> Error while generating pdf at %s", req.url, err);
-        return next(err);
-      }
+    pdf.create(newLiquidation).toStream(function (err, stream) {
+      if (err) return console.log(err);
       stream.pipe(res);
     });
   } catch (error) {
