@@ -104,35 +104,39 @@ class LiquidationService {
                 <p style="color: #666; width: 70%; margin: 0; padding-bottom: 5px; text-align: let; font-family: sans-serif; font-size: .65em; float: left;">Informe de Liquidacion</p>
             </div>
             <div style="border-bottom: 1px solid #ddd; text-align: left;">
-            <h2>Nombre completo : ${report.person.lastName} ${
+            <h3>Nombre completo : ${report.person.lastName} ${
       report.person.name
-    }</h2>
-            <h2>Fecha de liquidacion: ${new Date(
+    }</h3>
+            <h3>CUIT : ${report.person.cuit.slice(
+              0,
+              2
+            )}-${report.person.cuit.slice(2, 10)}-${report.person.cuit.slice(
+      10,
+      12
+    )}</h3>
+            <h3>Fecha de liquidacion: ${new Date(
               report.createdAt
-            ).toLocaleString()}</h2>
-            <h2>Subtotal: $${report.monthAmount.toFixed(2)}</h2>
-            <h2>Retencion aplicada: ${report.retention.toFixed(2)}%</h2>
-            <h2>Monto Retenido: $${report.retainedAmount.toFixed(2)}</h2>
-            <h2>Monto Final: $${(
+            ).toLocaleString()}</h3>
+            <h3>Subtotal: $${report.monthAmount.toFixed(2)}</h3>
+            <h3>Retencion aplicada: ${report.retention.toFixed(2)}%</h3>
+            <h3>Monto Retenido: $${report.retainedAmount.toFixed(2)}</h3>
+            <h3>Monto Final: $${(
               report.monthAmount - report.retainedAmount
-            ).toFixed(2)}</h2>
+            ).toFixed(2)}</h3>
             </div>
-            <table style="border-collapse: collapse; border: 1px solid black; text-align: center;">
-            <thead>
-              <tr >
-                <th style="border: 1px solid black;" >Numero de factura</th>
-                <th style="border: 1px solid black;" >Fecha de factura</th>
-                <th style="border: 1px solid black;" >Importe antes de impuesto</th>
-                <th style="border: 1px solid black;" >Tipo de factura</th>
-                <th style="border: 1px solid black;" >Importe luego de impuesto</th>
-                <th style="border: 1px solid black;" >Gastos amionistrativos</th>
-                <th style="border: 1px solid black;" >Importe luego de gastos adminitrativos</th>
-              </tr>
+            <div>
+            <table style="border-collapse: collapse; border: 1px solid black; text-align: center; font-size: 1px;">
+              <thead style="font-size: 1px;">
+                <th style="border: 1px solid black; font-size: 16px;">Numero de factura</th>
+                <th style="border: 1px solid black; font-size: 16px;">Fecha de factura</th>
+                <th style="border: 1px solid black; font-size: 16px;">Importe antes de impuesto</th>
+                <th style="border: 1px solid black; font-size: 16px;">Tipo de factura</th>
+                <th style="border: 1px solid black; font-size: 16px;">Importe luego de impuesto</th>
+                <th style="border: 1px solid black; font-size: 16px;">Gastos amionistrativos</th>
+                <th style="border: 1px solid black; font-size: 16px;">Importe luego de gastos adminitrativos</th>
               </thead>
-              </tbody style="text-align: center;">
-              ${report.retentions.map(
-                (retention) =>
-                  `<tr style="border: 1px solid black">
+              ${(`${report.retentions.map((retention) => {
+                return `<tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                      <td style="border: 1px solid black;" >${
                        retention.billNumber
                      }</td>
@@ -155,9 +159,8 @@ class LiquidationService {
                        retention.finalAmount *
                        (1 - retention.adminExpenses / 100)
                      ).toFixed(2)}</td>
-                </tr>`
-              )}
-              </tbody>
+                </tr>`;
+              })}`).split(',').join('')}
             </table>
         </body>
     </html>
