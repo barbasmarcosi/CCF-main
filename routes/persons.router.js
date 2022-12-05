@@ -33,7 +33,7 @@ router.post("/toJson", upload.single("file"), async (req, res, next) => {
     .toLowerCase();
   const filePath = file.path;
   const fileText = fs.readFileSync(filePath, "utf8");
-  if (ext === "csv") {
+  if (ext.toLowerCase() === "csv") {
     const cleanedCsv = fileText.replace(
       /(;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\r\n)/g,
       ""
