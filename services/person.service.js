@@ -57,10 +57,24 @@ class PersonService {
             cuit: person.CUIT,
             registration: person["Matr�cula"].replace(".", ""),
             email: person.Email,
-            city: person['Dom Particular Municipio'],
-            party: person['Dom Particular Localidad'],
-            address: person['Dom Particular'],
-            phone: person['Dom Particular Telefonos'],
+            city: person["Dom Profesional Municipio"],
+            party: person["Dom Profesional Localidad"],
+            address: person["Dom Profesional"],
+            phone: person["Dom Profesional Telefonos"],
+            state: false,
+          });
+        }
+        if (coincidence.length && person.CUIT) {
+          coincidence[0].update({
+            name: person.Nombres,
+            lastName: person.Apellido,
+            cuit: person.CUIT,
+            registration: person["Matr�cula"].replace(".", ""),
+            email: person.Email,
+            city: person["Dom Profesional Municipio"],
+            party: person["Dom Profesional Localidad"],
+            address: person["Dom Profesional"],
+            phone: person["Dom Profesional Telefonos"],
             state: false,
           });
         }
