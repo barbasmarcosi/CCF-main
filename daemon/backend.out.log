@@ -1,0 +1,1057 @@
+On port http://localhost:5000
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id" WHERE "Liquidation"."id" = '4';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId" FROM "bills" AS "Bill" WHERE "Bill"."liquidationId" = '4';
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill" WHERE "Bill"."id" = '4';
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person" WHERE "Person"."id" = '466';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): UPDATE "persons" SET "state"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"registration"=$3,"email"=$4,"city"=$5,"party"=$6,"address"=$7 WHERE "id" = $8
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"registration"=$3,"email"=$4,"city"=$5,"party"=$6,"address"=$7 WHERE "id" = $8
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person" WHERE "Person"."id" = '441';
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"city"=$3,"party"=$4,"address"=$5,"phone"=$6 WHERE "id" = $7
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "retention", "annulled" AS "state", "retentionDate", "createdAt", "personId" FROM "retentions" AS "Retention";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person" WHERE "Person"."id" = '441';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): UPDATE "persons" SET "state"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"registration"=$3,"email"=$4,"city"=$5,"party"=$6,"address"=$7 WHERE "id" = $8
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"registration"=$3,"email"=$4,"city"=$5,"party"=$6,"address"=$7 WHERE "id" = $8
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "name"=$1,"lastName"=$2,"registration"=$3,"city"=$4,"party"=$5,"address"=$6,"phone"=$7,"state"=$8 WHERE "id" = $9
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): UPDATE "persons" SET "registration"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill" WHERE "Bill"."id" = '1';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill" WHERE "Bill"."id" = '3';
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): INSERT INTO "bills" ("id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId","liquidationId";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person" WHERE "Person"."id" = '441';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill" WHERE "Bill"."id" = '5';
+Executing (default): UPDATE "bills" SET "initialAmount"=$1,"description"=$2,"finalAmount"=$3,"adminExpenses"=$4,"billDate"=$5 WHERE "id" = $6
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "retention", "annulled" AS "state", "retentionDate", "createdAt", "personId" FROM "retentions" AS "Retention";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation";
+Executing (default): INSERT INTO "liquidations" ("id","monthAmount","retention","retainedAmount","state","createdAt","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING "id","monthAmount","retention","retainedAmount","state","createdAt","personId";
+Executing (default): UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): INSERT INTO "bills" ("id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId","liquidationId";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "retention", "annulled" AS "state", "retentionDate", "createdAt", "personId" FROM "retentions" AS "Retention";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation";
+Executing (default): INSERT INTO "liquidations" ("id","monthAmount","retention","retainedAmount","state","createdAt","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING "id","monthAmount","retention","retainedAmount","state","createdAt","personId";
+Executing (default): UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id" WHERE "Liquidation"."id" = '6';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId" FROM "bills" AS "Bill" WHERE "Bill"."liquidationId" = '6';
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation" WHERE "Liquidation"."id" = '6';
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2
+Executing (default): UPDATE "liquidations" SET "state"=$1 WHERE "id" = $2
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";
+Executing (default): SELECT "id", "retention", "annulled" AS "state", "retentionDate", "createdAt", "personId" FROM "retentions" AS "Retention";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation";
+Executing (default): INSERT INTO "liquidations" ("id","monthAmount","retention","retainedAmount","state","createdAt","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING "id","monthAmount","retention","retainedAmount","state","createdAt","personId";
+Executing (default): UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2
+On port http://localhost:5000
+On port http://localhost:5000
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation" WHERE "Liquidation"."id" = '7';
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): UPDATE "liquidations" SET "state"=$1 WHERE "id" = $2
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "id", "retention", "annulled" AS "state", "retentionDate", "createdAt", "personId" FROM "retentions" AS "Retention";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill";
+Executing (default): SELECT "id", "monthAmount", "retention", "retainedAmount", "state", "createdAt", "personId" FROM "liquidations" AS "Liquidation";
+Executing (default): INSERT INTO "liquidations" ("id","monthAmount","retention","retainedAmount","state","createdAt","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING "id","monthAmount","retention","retainedAmount","state","createdAt","personId";
+Executing (default): UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id" WHERE "Liquidation"."id" = '8';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId" FROM "bills" AS "Bill" WHERE "Bill"."liquidationId" = '8';
+Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id";
+Executing (default): SELECT "Bill"."id", "Bill"."billNumber", "Bill"."billType", "Bill"."registerType", "Bill"."description", "Bill"."initialAmount", "Bill"."adminExpenses", "Bill"."finalAmount", "Bill"."billDate", "Bill"."createdAt", "Bill"."state", "Bill"."personId", "Bill"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "bills" AS "Bill" LEFT OUTER JOIN "persons" AS "person" ON "Bill"."personId" = "person"."id";
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId", "liquidationId" FROM "bills" AS "Bill" WHERE "Bill"."id" = '6';
+Executing (default): SELECT "id", "registration", "cuit", "lastName", "name", "email", "city", "party", "address", "phone", "state", "createdAt" FROM "persons" AS "Person";

@@ -43,10 +43,13 @@ class LiquidationService {
           });
         });
         let retainedAmount;
-        if (monthAmount > data.maxAllowed) {
+        let retention;
+        if (monthAmount >= data.maxAllowed) {
           retainedAmount = total * retentionMonth[0].retention;
+          retention = retentionMonth[0].retention * 100;
         } else {
-          retainedAmount = total;
+          retainedAmount = 0;
+          retention = 0;
         }
         if (total) {
           res = true;
@@ -54,7 +57,7 @@ class LiquidationService {
             monthAmount: total,
             retainedAmount: retainedAmount,
             personId: data.personId,
-            retention: retentionMonth[0].retention * 100,
+            retention: retention,
             state: false,
           });
         }
