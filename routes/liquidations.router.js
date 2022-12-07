@@ -35,6 +35,20 @@ router.get(
   }
 );
 
+router.get("/afip/:date", async (req, res, next) => {
+  try {
+    const { date } = req.params;
+    const newLiquidation = await service.afip(date);
+    /*pdf.create(newLiquidation[0]).toStream(function (err, stream) {
+      if (err) return console.log(err);
+      stream.pipe(res);
+    });*/
+    return res.send(newLiquidation);
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/report/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
