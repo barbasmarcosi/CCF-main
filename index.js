@@ -1,5 +1,11 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
+const LiquidationService = require("./services/liquidation.service");
+const PersonService = require("./services/person.service");
+const RetentionService = require("./services/retention.service");
+const BillService = require("./services/bill.service");
+const CreditNoteService = require("./services/credit.note.service");
 
 const routerApi = require("./routes"); //el archivo index.js se busca en automático
 const {
@@ -7,7 +13,11 @@ const {
   errorHandler,
   boomErrorHandler,
 } = require("./middlewares/error.handler");
-
+const lService = new LiquidationService();
+const PService = new PersonService();
+const RService = new RetentionService();
+const BService = new BillService();
+const CNService = new CreditNoteService();
 const app = express();
 const port = 5000;
 
@@ -29,6 +39,35 @@ const options = {
   },
 };
 app.use(cors(options));
+const newFiles = async () => {
+  const exists = await fs.existsSync("newFiles");
+  if (exists) {
+    await fs.rmSync("newFiles", { recursive: true }, (a) => console.log(a));
+  }
+  await fs.mkdirSync("newFiles", (a) => console.log(a));
+};
+
+const dist = async () => {
+  const exists = await fs.existsSync("dist");
+  if (exists) {
+    await fs.rmSync("dist", { recursive: true }, (a) => console.log(a));
+  }
+  await fs.mkdirSync("dist", (a) => console.log(a));
+};
+
+const exists = fs.existsSync("backup");
+if (!exists) {
+  fs.mkdirSync("backup", (a) => console.log(a));
+}
+
+lService.backup();
+PService.backup();
+RService.backup();
+BService.backup();
+CNService.backup();
+
+newFiles();
+dist();
 
 routerApi(app);
 

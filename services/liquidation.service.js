@@ -4,19 +4,63 @@ const BillService = require("./bill.service");
 const fs = require("fs");
 const billService = new BillService();
 const JSZip = require("jszip");
-const pdf = require("html-pdf");
 const { Op } = require("sequelize");
+const puppeteer = require("puppeteer");
 
 class LiquidationService {
   constructor() {}
 
+  async backup() {
+    const liquidations = await models.Liquidation.findAll();
+    const backup = liquidations
+      .map(
+        (liquidation) =>
+          `INSERT INTO liquidations VALUES (${Object.entries(
+            liquidation.dataValues
+          ).map((entry) =>
+            entry[0] == "createdAt"
+              ? `'${new Date(entry[1]).toISOString()}'`
+              : `'${entry[1]}'`
+          )})`
+      )
+      .join(";\n");
+    fs.writeFileSync("./backup/liquidations.txt", backup);
+  }
+
   async create(data) {
     let res = false;
-    const retentions = await models.Retention.findAll();
+    const retentions = await models.Retention.findAll({
+      where: {
+        personId: {
+          [Op.eq]: data.personId,
+        },
+      },
+    });
+    const liquidations = await models.Liquidation.findAll();
+    const creditNotes = await models.CreditNote.findAll({
+      where: {
+        personId: {
+          [Op.eq]: data.personId,
+        },
+      },
+    });
+    console.log(creditNotes);
     const liquidationDate = new Date();
+    const maxAllowed = Number(data.maxAllowed);
+    const pendentCreditNotes = creditNotes.filter(
+      (creditNote) => !creditNote.state && !creditNote.liquidationId
+    );
+    console.log(pendentCreditNotes);
+    let creditNotesAmount = 0;
+    if (pendentCreditNotes.length) {
+      creditNotesAmount = pendentCreditNotes.reduce(
+        (a, b) => a + Number(b.amount),
+        0
+      );
+    }
     const retentionMonth = retentions.filter(
       (retention) =>
-        retention.personId == data.personId &&
+        //retention.personId == data.personId &&
         retention.retentionDate.getFullYear() ==
           liquidationDate.getFullYear() &&
         retention.retentionDate.getMonth() == liquidationDate.getMonth() &&
@@ -25,6 +69,20 @@ class LiquidationService {
     if (retentionMonth.length) {
       const bills = await models.Bill.findAll();
       const verifyMax = bills.filter((bill) => bill.personId == data.personId);
+      const prevLiq = liquidations.filter(
+        (liquidation) =>
+          liquidation.personId == data.personId &&
+          liquidation.dataValues.createdAt.getFullYear() ==
+            liquidationDate.getFullYear() &&
+          liquidation.dataValues.createdAt.getMonth() ==
+            liquidationDate.getMonth() &&
+          !liquidation.state
+      );
+      let prevLiqAmount = 0;
+      if (prevLiq.length) {
+        prevLiqAmount = prevLiq.reduce((a, b) => a + Number(b.monthAmount), 0);
+      }
+
       let monthAmount = 0;
       verifyMax.map((bill) => (monthAmount += bill.finalAmount));
       const monthBills = bills.filter((bill) => {
@@ -33,34 +91,56 @@ class LiquidationService {
         );
       });
       if (monthBills.length) {
-        let total = 0;
-        const id = (await models.Liquidation.findAll()).length + 1;
-        monthBills.map(async (bill) => {
-          total =
-            total +
-            (bill.finalAmount - bill.finalAmount * (bill.adminExpenses / 100));
-          await bill.update({
-            liquidationId: id,
+        try {
+          let total = 0;
+          monthBills.map(async (bill) => {
+            total =
+              total +
+              (bill.finalAmount -
+                bill.finalAmount * (bill.adminExpenses / 100));
           });
-        });
-        let retainedAmount;
-        let retention;
-        if (monthAmount >= data.maxAllowed) {
-          retainedAmount = total * retentionMonth[0].retention;
-          retention = retentionMonth[0].retention * 100;
-        } else {
-          retainedAmount = 0;
-          retention = 0;
-        }
-        if (total) {
-          res = true;
-          await models.Liquidation.create({
-            monthAmount: total,
-            retainedAmount: retainedAmount,
-            personId: data.personId,
-            retention: retention,
-            state: false,
-          });
+          let retainedAmount;
+          let retention;
+          if (monthAmount >= maxAllowed && prevLiqAmount == 0) {
+            retainedAmount = (total - maxAllowed) * retentionMonth[0].retention;
+            retention = retentionMonth[0].retention * 100;
+          } else if (prevLiqAmount > maxAllowed) {
+            retainedAmount = total * retentionMonth[0].retention;
+            retention = retentionMonth[0].retention * 100;
+          } else if (prevLiqAmount <= maxAllowed) {
+            retainedAmount =
+              (total - (maxAllowed - prevLiqAmount)) *
+              retentionMonth[0].retention;
+            retention = retentionMonth[0].retention * 100;
+          } else {
+            retainedAmount = 0;
+            retention = 0;
+          }
+          if (total) {
+            res = true;
+            await models.Liquidation.create({
+              monthAmount: total + creditNotesAmount,
+              retainedAmount: retainedAmount,
+              personId: data.personId,
+              retention: retention,
+              state: false,
+            });
+            const id = liquidations.length + 1;
+            monthBills.map(async (bill) => {
+              await bill.update({
+                liquidationId: id,
+              });
+            });
+            if (pendentCreditNotes.length) {
+              pendentCreditNotes.map(async (creditNote) => {
+                await creditNote.update({
+                  liquidationId: id,
+                });
+              });
+            }
+          }
+        } catch (e) {
+          throw boom.internal("Hubo un error interno, vuleva a intentar luego");
         }
       } else {
         throw boom.notFound("Esta persona no posee facturas sin liquidar");
@@ -94,6 +174,11 @@ class LiquidationService {
         new Date(liquidation.createdAt) < to &&
         !liquidation.state
     );
+    if (!filtered.length) {
+      throw boom.notFound(
+        "No se encuentran liquidaciones en el periodo seleccionado"
+      );
+    }
     const txt = filtered
       .map((liquidation) => {
         const cuit = liquidation.person.cuit;
@@ -116,7 +201,7 @@ class LiquidationService {
       })
       .join("\n")
       .replace(/(\.)/g, ",");
-    const txtPath = `AR-30667354508-${secondSplit[0]}${`${
+    const txtPath = `newFiles/AR-30667354508-${secondSplit[0]}${`${
       Number(secondSplit[1]) + 1
     }`.padStart(2, "0")}${firstSplit[1]}-6-R${secondSplit[0]}-${`${
       Number(secondSplit[1]) + 1
@@ -126,7 +211,6 @@ class LiquidationService {
     } catch (e) {
       console.log("Cannot write file ", e);
     }
-    console.log(txtPath);
 
     const content = `
     <!doctype html>
@@ -210,58 +294,83 @@ class LiquidationService {
               </html>
 `;
 
-    const pdfPath = `Liquidacion de AFIP. Periodo ${secondSplit[0]}-${`${
-      Number(secondSplit[1]) + 1
-    }`.padStart(2, "0")}/${Number(firstSplit[1])}`;
-    const pdfCreator = async () => {
-      console.log(pdfPath);
-      pdf.create(content).toFile(`${pdfPath}.pdf`, function (err, res) {
-        if (err) {
-          console.log(err);
-          return false;
-        }
-        return true;
-      });
-      return true;
+    const pdfPath = `newFiles/Liquidacion_de_AFIP_Periodo_${
+      secondSplit[0]
+    }-${`${Number(secondSplit[1]) + 1}`.padStart(2, "0")}_${Number(
+      firstSplit[1]
+    )}`;
+
+    const newHtmlFile = async () => {
+      const path = `${pdfPath}.html`;
+      const file = fs.createWriteStream(path);
+      file.write(content);
+      return path;
     };
 
-    const zipAll = async () => {
-      const zip = new JSZip();
-      try {
-        const txtZippedPath = fs.ReadStream(`${txtPath}.zip`);
-        const pdfData = fs.readFileSync(`${pdfPath}.pdf`);
-        zip.file(`${txtPath}.zip`, txtZippedPath);
-        zip.file(`${pdfPath}.pdf`, pdfData);
-        zip
-          .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-          .pipe(fs.createWriteStream(`${pdfPath}.zip`));
-      } catch (err) {
-        console.error(err);
+    const pdfCreator = async () => {
+      const htmlPath = await newHtmlFile();
+      if (htmlPath) {
+        try {
+          const browser = await puppeteer.launch();
+          const page = await browser.newPage();
+          const html = fs.readFileSync(htmlPath, "utf-8");
+          await page.setContent(html, { waitUntil: "domcontentloaded" });
+          await page.emulateMediaType("screen");
+          await page.pdf({
+            path: `${pdfPath}.pdf`,
+            format: "A4",
+          });
+          await browser.close();
+          return `${pdfPath}.pdf`;
+        } catch (e) {
+          console.log(e);
+          return false;
+        }
+      } else {
+        throw new Error("Fallo en pdf");
       }
-      return zip;
     };
 
     const zipTxt = async () => {
       const txtZip = new JSZip();
       try {
         const txtData = fs.readFileSync(`${txtPath}.txt`);
-        txtZip.file(`${txtPath}.txt`, txtData);
+        txtZip.file(`${txtPath}.txt`.split("/")[1], txtData);
         txtZip
           .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-          .pipe(fs.createWriteStream(`${txtPath}.zip`).end(zipAll()));
+          .pipe(fs.createWriteStream(`${txtPath}.zip`));
+        return `${txtPath}.zip`;
       } catch (err) {
         console.error(err);
+        return false;
       }
     };
 
-    const setZip = async () => {
-      const pdfCreated = await pdfCreator();
-      if (pdfCreated) {
-        await zipTxt();
+    const zipAll = async () => {
+      const zip = new JSZip();
+      const pdf = await pdfCreator();
+      const txt = await zipTxt();
+
+      if (pdf && txt) {
+        try {
+          const txtZippedPath = fs.ReadStream(txt);
+          const pdfData = fs.readFileSync(pdf);
+          zip.file(`${txtPath}.zip`.split("/")[1], txtZippedPath);
+          zip.file(`${pdfPath}.pdf`.split("/")[1], pdfData);
+          zip
+            .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+            .pipe(fs.createWriteStream(`${pdfPath}.zip`));
+          return `${pdfPath}.zip`;
+        } catch (err) {
+          console.log(err);
+          throw new Error("Hubo un problema con la generacion del zip");
+        }
+      } else {
+        throw new Error("Hubo un problema con la generacion del archivo");
       }
-      return false;
     };
-    return setZip();
+    const res = await zipAll();
+    return res ? res : false;
   }
 
   async report(id) {
@@ -276,12 +385,22 @@ class LiquidationService {
       },
       attributes: { exclude: ["liquidationId"] },
     });
+    const creditNotes = await models.CreditNote.findAll({
+      where: {
+        liquidationId: {
+          [Op.eq]: id,
+        },
+      },
+      attributes: { exclude: ["liquidationId"] },
+    });
     const report = {
       ...liquidations.dataValues,
       retentions: [...bills],
     };
-    //console.log(report[0]);
-
+    const creditNotesAmount = creditNotes.reduce(
+      (a, b) => a + Number(b.amount),
+      0
+    );
     const content = `
     <!doctype html>
     <html>
@@ -390,21 +509,37 @@ class LiquidationService {
                 <td>-$${report.retainedAmount.toFixed(2)}</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Nota/s de crédito:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$${creditNotesAmount.toFixed(2)}</td>
+              </tr>
+              <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                 <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Total:</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>$${(report.monthAmount - report.retainedAmount).toFixed(
-                  2
-                )}</td>
+                <td>$${(
+                  report.monthAmount -
+                  report.retainedAmount +
+                  creditNotesAmount
+                ).toFixed(2)}</td>
               </tr>
             </tbody>
           </table>
         </body>
     </html>
 `;
-    return content;
+    const newHtmlFile = () => {
+      const path = "./newFiles/file.html";
+      const file = fs.createWriteStream(path);
+      file.write(content);
+      return path;
+    };
+    return newHtmlFile();
   }
 
   async find() {
@@ -430,13 +565,33 @@ class LiquidationService {
 
   async delete(id) {
     const liquidation = await this.findOne(id);
-    const bills = await billService.find();
-    bills.map(async (bill) => {
-      if (bill.liquidationId == id) {
-        await bill.update({ liquidationId: null });
+    if (!liquidation.state) {
+      const bills = await models.Bill.findAll({
+        where: {
+          liquidationId: {
+            [Op.eq]: id,
+          },
+        },
+      });
+      const creditNotes = await models.CreditNote.findAll({
+        where: {
+          liquidationId: {
+            [Op.eq]: id,
+          },
+        },
+      });
+      try {
+        bills.map(async (bill) => await bill.update({ liquidationId: null }));
+        creditNotes.map(
+          async (creditNote) => await creditNote.update({ liquidationId: null })
+        );
+        await liquidation.update({ state: true });
+      } catch (e) {
+        throw new Error("Hubo un error interno, vulva a intentarlo luego");
       }
-    });
-    await liquidation.update({ state: true });
+    } else {
+      throw new Error("La liquidacion ya se encuentra anulada");
+    }
     return { id };
   }
 }

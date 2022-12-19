@@ -3,47 +3,22 @@ const { Model, DataTypes, Sequelize } = require("sequelize");
 const { LIQUIDATION_TABLE } = require("./liquidation.model");
 const { PERSON_TABLE } = require("./person.model");
 
-const BILL_TABLE = "bills";
+const CREDIT_NOTE_TABLE = "creditNote";
 
-const BillSchema = {
+const CreditNoteSchema = {
   id: {
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
     type: DataTypes.INTEGER,
   },
-  billNumber: {
-    allowNull: false,
-    unique: true,
-    type: DataTypes.STRING(14),
-  },
-  billType: {
-    allowNull: false,
-    type: DataTypes.CHAR(1),
-  },
-  registerType: {
-    allowNull: false,
-    type: DataTypes.STRING(7),
-  },
   description: {
     allowNull: false,
     type: DataTypes.STRING,
   },
-  initialAmount: {
+  amount: {
     allowNull: false,
     type: DataTypes.FLOAT,
-  },
-  adminExpenses: {
-    allowNull: false,
-    type: DataTypes.FLOAT,
-  },
-  finalAmount: {
-    allowNull: false,
-    type: DataTypes.FLOAT,
-  },
-  billDate: {
-    allowNull: false,
-    type: DataTypes.DATE,
   },
   createdAt: {
     allowNull: false,
@@ -80,7 +55,7 @@ const BillSchema = {
   },
 };
 
-class Bill extends Model {
+class CreditNote extends Model {
   static associate(models) {
     this.belongsTo(models.Person, { as: "person" }),
       this.belongsTo(models.Liquidation, { as: "liquidation" });
@@ -89,11 +64,11 @@ class Bill extends Model {
   static config(sequelize) {
     return {
       sequelize,
-      tableName: BILL_TABLE,
-      modelName: "Bill",
+      tableName: CREDIT_NOTE_TABLE,
+      modelName: "CreditNote",
       timestamps: false,
     };
   }
 }
 
-module.exports = { Bill, BillSchema, BILL_TABLE };
+module.exports = { CreditNote, CreditNoteSchema, CREDIT_NOTE_TABLE };

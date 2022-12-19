@@ -1,9 +1,25 @@
 const boom = require("@hapi/boom");
-const csv = require("csvtojson");
 const { models } = require("../libs/sequelize");
+const fs = require("fs");
 
 class PersonService {
   constructor() {}
+
+  async backup() {
+    const persons = await models.Person.findAll();
+    const backup = persons
+      .map(
+        (person) =>
+          `INSERT INTO persons VALUES (${Object.entries(person.dataValues).map(
+            (entry) =>
+              entry[0] == "createdAt"
+                ? `'${new Date(entry[1]).toISOString()}'`
+                : `'${entry[1]}'`
+          )})`
+      )
+      .join(";\n");
+    fs.writeFileSync("./backup/persons.txt", backup);
+  }
 
   async create(data) {
     const persons = await models.Person.findAll();
@@ -32,8 +48,13 @@ class PersonService {
 
   async update(id, changes) {
     const person = await this.findOne(id);
-    const rta = await person.update(changes);
-    return rta;
+    if (!person.state) {
+      const rta = await person.update(changes);
+      return rta;
+    } else {
+      const rta = await person.update({ ...changes, state: false });
+      return rta;
+    }
   }
 
   async csvToJson(path) {
@@ -89,10 +110,14 @@ class PersonService {
     const person = await this.findOne(id);
     const bills = await models.Bill.findAll();
     const pendent = bills.filter(
-      (bill) => !bill.idLiquidacion && bill.personId == person.id
+      (bill) => !bill.idLiquidacion && bill.personId == person.id && !bill.state
     );
     if (!pendent.length) {
-      return await person.update({ state: true });
+      if (!person.state) {
+        return await person.update({ state: true });
+      } else {
+        throw new Error("Esta persona ya se encuentra anulada");
+      }
     } else {
       throw new Error("Esta persona tiene facturas pendientes a liquidar");
     }

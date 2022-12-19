@@ -1,6 +1,7 @@
 const express = require("express");
+const puppeteer = require("puppeteer");
 const fs = require("fs");
-const pdf = require("html-pdf");
+const zlib = require("zlib");
 const LiquidationService = require("../services/liquidation.service");
 const validatorHandler = require("../middlewares/validator.handler");
 const {
@@ -36,14 +37,39 @@ router.get(
 );
 
 router.get("/afip/:date", async (req, res, next) => {
+  const { date } = req.params;
   try {
-    const { date } = req.params;
     const newLiquidation = await service.afip(date);
-    /*pdf.create(newLiquidation[0]).toStream(function (err, stream) {
-      if (err) return console.log(err);
-      stream.pipe(res);
-    });*/
-    return res.send(newLiquidation);
+    setTimeout(() => {
+      exists = fs.existsSync(newLiquidation);
+      if (exists) {
+        let headers = {
+          "Connection": "close", // intention
+          "Content-Encoding": "gzip",
+          // add some headers like Content-Type, Cache-Control, Last-Modified, ETag, X-Powered-By
+        };
+
+        let file = fs.readFileSync(newLiquidation); // sync is for readability
+        let gzip = zlib.gzipSync(file); // is instance of Uint8Array
+        headers["Content-Length"] = gzip.length; // not the file's size!!!
+
+        res.writeHead(200, headers);
+
+        let chunkLimit = 16 * 1024; // some clients choke on huge responses
+        let chunkCount = Math.ceil(gzip.length / chunkLimit);
+        for (let i = 0; i < chunkCount; i++) {
+          if (chunkCount > 1) {
+            let chunk = gzip.slice(i * chunkLimit, (i + 1) * chunkLimit);
+            res.write(chunk);
+          } else {
+            res.write(gzip);
+          }
+        }
+        res.end();
+      } else {
+        throw new Error("Hubo un error, intentelo nuevamente");
+      }
+    }, 3000);
   } catch (error) {
     next(error);
   }
@@ -53,10 +79,17 @@ router.get("/report/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const newLiquidation = await service.report(id);
-    pdf.create(newLiquidation).toStream(function (err, stream) {
-      if (err) return console.log(err);
-      stream.pipe(res);
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    const html = fs.readFileSync(newLiquidation, "utf-8");
+    await page.setContent(html, { waitUntil: "domcontentloaded" });
+    await page.emulateMediaType("screen");
+    const pdf = await page.pdf({
+      path: "./newFiles/result.pdf",
+      format: "A4",
     });
+    await browser.close();
+    res.send(pdf);
   } catch (error) {
     next(error);
   }

@@ -1,9 +1,26 @@
 const boom = require("@hapi/boom");
-const xl = require("excel4node");
 const { models } = require("../libs/sequelize");
+const fs = require("fs");
 
 class BillService {
   constructor() {}
+
+  async backup() {
+    const bills = await models.Bill.findAll();
+    const backup = bills
+      .map(
+        (bill) =>
+          `INSERT INTO bills VALUES (${Object.entries(
+            bill.dataValues
+          ).map((entry) =>
+            entry[0] == "createdAt" || entry[0] == "billDate"
+              ? `'${new Date(entry[1]).toISOString()}'`
+              : `'${entry[1]}'`
+          )})`
+      )
+      .join(";\n");
+    fs.writeFileSync("./backup/bills.txt", backup);
+  }
 
   async create(data) {
     const res = await models.Bill.create(data);
@@ -114,9 +131,14 @@ class BillService {
 
   async update(id, changes) {
     const bill = await this.findOne(id);
-    if (!bill.liquidationId) {
+    if (!bill.liquidationId && !bill.state) {
       return await bill.update(changes);
     } else {
+      if (bill.state) {
+        throw boom.notFound(
+          "No se puede modificar porque la factura se encuentra anulada"
+        );
+      }
       throw boom.notFound(
         "No se puede modificar porque la factura se encuentra liquidada"
       );
@@ -125,9 +147,14 @@ class BillService {
 
   async delete(id) {
     const bill = await this.findOne(id);
-    if (!bill.liquidationId) {
+    if (!bill.liquidationId && !bill.state) {
       await bill.update({ state: true });
     } else {
+      if (bill.state) {
+        throw boom.notFound(
+          "La factura ya se encuentra anulada"
+        );
+      }
       throw boom.notFound(
         "No se puede anular porque la factura se encuentra liquidada"
       );

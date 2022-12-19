@@ -1,8 +1,26 @@
 const boom = require("@hapi/boom");
 const { models } = require("../libs/sequelize");
+const fs = require("fs");
 
 class RetentionService {
   constructor() {}
+
+  async backup() {
+    const retentions = await models.Retention.findAll();
+    const backup = retentions
+      .map(
+        (retention) =>
+          `INSERT INTO retentions VALUES (${Object.entries(
+            retention.dataValues
+          ).map((entry) =>
+            entry[0] == "createdAt" || entry[0] == "retentionDate"
+              ? `'${new Date(entry[1]).toISOString()}'`
+              : `'${entry[1]}'`
+          )})`
+      )
+      .join(";\n");
+    fs.writeFileSync("./backup/retentions.txt", backup);
+  }
 
   async create(data) {
     const retentions = await models.Retention.findAll();
