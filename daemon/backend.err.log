@@ -1,419 +1,299 @@
-(node:13868) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:46608) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
-ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
-    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
-    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
-    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
-    at Connection.emit (node:events:390:28)
-    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
-    at Socket.emit (node:events:390:28)
-    at emitErrorNT (node:internal/streams/destroy:164:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
-  parent: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  },
-  original: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  }
-}
-ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
-    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
-    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
-    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
-    at Connection.emit (node:events:390:28)
-    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
-    at Socket.emit (node:events:390:28)
-    at emitErrorNT (node:internal/streams/destroy:164:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
-  parent: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  },
-  original: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  }
-}
-ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
-    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
-    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
-    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
-    at Connection.emit (node:events:390:28)
-    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
-    at Socket.emit (node:events:390:28)
-    at emitErrorNT (node:internal/streams/destroy:164:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
-  parent: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  },
-  original: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  }
-}
-ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
-    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
-    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
-    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
-    at Connection.emit (node:events:390:28)
-    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
-    at Socket.emit (node:events:390:28)
-    at emitErrorNT (node:internal/streams/destroy:164:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
-  parent: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  },
-  original: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  }
-}
-ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
-    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
-    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
-    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
-    at Connection.emit (node:events:390:28)
-    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
-    at Socket.emit (node:events:390:28)
-    at emitErrorNT (node:internal/streams/destroy:164:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
-  parent: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  },
-  original: Error: connect ECONNREFUSED ::1:5432
-      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
-    errno: -4078,
-    code: 'ECONNREFUSED',
-    syscall: 'connect',
-    address: '::1',
-    port: 5432
-  }
-}
-Error: No se puede modificar porque la factura se encuentra liquidada
-    at BillService.update (C:\Sistema\services\bill.service.js:120:18)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\bills.router.js:69:20 {
-  data: null,
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 404,
-    payload: {
-      statusCode: 404,
-      error: 'Not Found',
-      message: 'No se puede modificar porque la factura se encuentra liquidada'
-    },
-    headers: {}
-  }
-}
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at new NodeError (node:internal/errors:371:5)
-    at ServerResponse.setHeader (node:_http_outgoing:576:11)
-    at ServerResponse.header (C:\Sistema\node_modules\express\lib\response.js:776:10)
-    at ServerResponse.send (C:\Sistema\node_modules\express\lib\response.js:170:12)
-    at ServerResponse.json (C:\Sistema\node_modules\express\lib\response.js:267:15)
-    at errorHandler (C:\Sistema\middlewares\error.handler.js:10:19)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-    at next (C:\Sistema\node_modules\express\lib\router\index.js:275:10)
-    at boomErrorHandler (C:\Sistema\middlewares\error.handler.js:21:3)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-[Error: ENOENT: no such file or directory, open 'C:\Sistema\dist\MatriculadosDistrito_Grid_XLS (4).csv'] {
-  errno: -4058,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: 'C:\\Sistema\\dist\\MatriculadosDistrito_Grid_XLS (4).csv',
-  storageErrors: []
-}
-[Error: ENOENT: no such file or directory, open 'C:\Sistema\dist\MatriculadosDistrito_Grid_XLS (4).csv'] {
-  errno: -4058,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: 'C:\\Sistema\\dist\\MatriculadosDistrito_Grid_XLS (4).csv',
-  storageErrors: []
-}
-[Error: ENOENT: no such file or directory, open 'C:\Sistema\dist\PadronRGSRet052022IIBB.TXT'] {
-  errno: -4058,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: 'C:\\Sistema\\dist\\PadronRGSRet052022IIBB.TXT',
-  storageErrors: []
-}
-Error: Esta persona no posee facturas sin liquidar
-    at LiquidationService.create (C:\Sistema\services\liquidation.service.js:62:20)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\liquidations.router.js:57:30 {
-  data: null,
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 404,
-    payload: {
-      statusCode: 404,
-      error: 'Not Found',
-      message: 'Esta persona no posee facturas sin liquidar'
-    },
-    headers: {}
-  }
-}
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at new NodeError (node:internal/errors:371:5)
-    at ServerResponse.setHeader (node:_http_outgoing:576:11)
-    at ServerResponse.header (C:\Sistema\node_modules\express\lib\response.js:776:10)
-    at ServerResponse.send (C:\Sistema\node_modules\express\lib\response.js:170:12)
-    at ServerResponse.json (C:\Sistema\node_modules\express\lib\response.js:267:15)
-    at errorHandler (C:\Sistema\middlewares\error.handler.js:10:19)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-    at next (C:\Sistema\node_modules\express\lib\router\index.js:275:10)
-    at boomErrorHandler (C:\Sistema\middlewares\error.handler.js:21:3)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-Error: No se puede anular porque la factura se encuentra liquidada
-    at BillService.delete (C:\Sistema\services\bill.service.js:131:18)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\bills.router.js:83:7 {
-  data: null,
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 404,
-    payload: {
-      statusCode: 404,
-      error: 'Not Found',
-      message: 'No se puede anular porque la factura se encuentra liquidada'
-    },
-    headers: {}
-  }
-}
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at new NodeError (node:internal/errors:371:5)
-    at ServerResponse.setHeader (node:_http_outgoing:576:11)
-    at ServerResponse.header (C:\Sistema\node_modules\express\lib\response.js:776:10)
-    at ServerResponse.send (C:\Sistema\node_modules\express\lib\response.js:170:12)
-    at ServerResponse.json (C:\Sistema\node_modules\express\lib\response.js:267:15)
-    at errorHandler (C:\Sistema\middlewares\error.handler.js:10:19)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-    at next (C:\Sistema\node_modules\express\lib\router\index.js:275:10)
-    at boomErrorHandler (C:\Sistema\middlewares\error.handler.js:21:3)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-Error: No se puede anular porque la factura se encuentra liquidada
-    at BillService.delete (C:\Sistema\services\bill.service.js:131:18)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\bills.router.js:83:7 {
-  data: null,
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 404,
-    payload: {
-      statusCode: 404,
-      error: 'Not Found',
-      message: 'No se puede anular porque la factura se encuentra liquidada'
-    },
-    headers: {}
-  }
-}
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at new NodeError (node:internal/errors:371:5)
-    at ServerResponse.setHeader (node:_http_outgoing:576:11)
-    at ServerResponse.header (C:\Sistema\node_modules\express\lib\response.js:776:10)
-    at ServerResponse.send (C:\Sistema\node_modules\express\lib\response.js:170:12)
-    at ServerResponse.json (C:\Sistema\node_modules\express\lib\response.js:267:15)
-    at errorHandler (C:\Sistema\middlewares\error.handler.js:10:19)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-    at next (C:\Sistema\node_modules\express\lib\router\index.js:275:10)
-    at boomErrorHandler (C:\Sistema\middlewares\error.handler.js:21:3)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-Error: Esta persona tiene facturas pendientes a liquidar
-    at PersonService.delete (C:\Sistema\services\person.service.js:97:13)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\persons.router.js:115:7
-C:\Sistema\node_modules\sequelize\lib\dialects\postgres\query.js:315
-        return new sequelizeErrors.ForeignKeyConstraintError({ message: errMessage, fields: null, index, table, parent: err });
-               ^
-
-ForeignKeyConstraintError [SequelizeForeignKeyConstraintError]: insert or update on table "bills" violates foreign key constraint "bills_liquidationId_fkey"
-    at Query.formatError (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\query.js:315:16)
-    at Query.run (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\query.js:87:18)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\node_modules\sequelize\lib\sequelize.js:619:16
-    at async PostgresQueryInterface.update (C:\Sistema\node_modules\sequelize\lib\dialects\abstract\query-interface.js:850:12)
-    at async Bill.save (C:\Sistema\node_modules\sequelize\lib\model.js:3967:35)
-    at async Bill.update (C:\Sistema\node_modules\sequelize\lib\model.js:4147:12)
-    at async C:\Sistema\services\liquidation.service.js:41:11 {
-  parent: error: insert or update on table "bills" violates foreign key constraint "bills_liquidationId_fkey"
-      at Parser.parseErrorMessage (C:\Sistema\node_modules\pg-protocol\dist\parser.js:287:98)
-      at Parser.handlePacket (C:\Sistema\node_modules\pg-protocol\dist\parser.js:126:29)
-      at Parser.parse (C:\Sistema\node_modules\pg-protocol\dist\parser.js:39:38)
-      at Socket.<anonymous> (C:\Sistema\node_modules\pg-protocol\dist\index.js:11:42)
-      at Socket.emit (node:events:390:28)
-      at addChunk (node:internal/streams/readable:324:12)
-      at readableAddChunk (node:internal/streams/readable:297:9)
-      at Socket.Readable.push (node:internal/streams/readable:234:10)
-      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
-    length: 267,
-    severity: 'ERROR',
-    code: '23503',
-    detail: 'Key (liquidationId)=(7) is not present in table "liquidations".',
-    hint: undefined,
-    position: undefined,
-    internalPosition: undefined,
-    internalQuery: undefined,
-    where: undefined,
-    schema: 'public',
-    table: 'bills',
-    column: undefined,
-    dataType: undefined,
-    constraint: 'bills_liquidationId_fkey',
-    file: 'ri_triggers.c',
-    line: '2465',
-    routine: 'ri_ReportViolation',
-    sql: 'UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2',
-    parameters: [ 7, 6 ]
-  },
-  original: error: insert or update on table "bills" violates foreign key constraint "bills_liquidationId_fkey"
-      at Parser.parseErrorMessage (C:\Sistema\node_modules\pg-protocol\dist\parser.js:287:98)
-      at Parser.handlePacket (C:\Sistema\node_modules\pg-protocol\dist\parser.js:126:29)
-      at Parser.parse (C:\Sistema\node_modules\pg-protocol\dist\parser.js:39:38)
-      at Socket.<anonymous> (C:\Sistema\node_modules\pg-protocol\dist\index.js:11:42)
-      at Socket.emit (node:events:390:28)
-      at addChunk (node:internal/streams/readable:324:12)
-      at readableAddChunk (node:internal/streams/readable:297:9)
-      at Socket.Readable.push (node:internal/streams/readable:234:10)
-      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
-    length: 267,
-    severity: 'ERROR',
-    code: '23503',
-    detail: 'Key (liquidationId)=(7) is not present in table "liquidations".',
-    hint: undefined,
-    position: undefined,
-    internalPosition: undefined,
-    internalQuery: undefined,
-    where: undefined,
-    schema: 'public',
-    table: 'bills',
-    column: undefined,
-    dataType: undefined,
-    constraint: 'bills_liquidationId_fkey',
-    file: 'ri_triggers.c',
-    line: '2465',
-    routine: 'ri_ReportViolation',
-    sql: 'UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2',
-    parameters: [ 7, 6 ]
-  },
-  sql: 'UPDATE "bills" SET "liquidationId"=$1 WHERE "id" = $2',
-  parameters: [ 7, 6 ],
-  fields: null,
-  table: 'bills',
-  value: undefined,
-  index: 'bills_liquidationId_fkey',
-  reltype: undefined
-}
-
-Node.js v17.3.1
-(node:18000) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:82:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:82:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:82:21
+Error: Hubo un problema con la generacion del archivo
+    at zipAll (C:\Sistema\services\liquidation.service.js:366:15)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:369:17)
+    at async C:\Sistema\routes\liquidations.router.js:42:28
+(node:34128) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:18020) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: No se puede anular porque la factura se encuentra liquidada
-    at BillService.delete (C:\Sistema\services\bill.service.js:131:18)
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Hubo un problema con la generacion del archivo
+    at zipAll (C:\Sistema\services\liquidation.service.js:373:15)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async C:\Sistema\routes\bills.router.js:83:7 {
-  data: null,
-  isBoom: true,
-  isServer: false,
-  output: {
-    statusCode: 404,
-    payload: {
-      statusCode: 404,
-      error: 'Not Found',
-      message: 'No se puede anular porque la factura se encuentra liquidada'
-    },
-    headers: {}
-  }
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+(node:41120) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Hubo un problema con la generacion del archivo
+    at zipAll (C:\Sistema\services\liquidation.service.js:377:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+(node:39556) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: Hubo un problema con la generacion del archivo
+    at zipAll (C:\Sistema\services\liquidation.service.js:382:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+Error: Could not find Chromium (rev. 1069273). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npm install`) or
+ 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
+    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
+    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
+    at async C:\Sistema\routes\liquidations.router.js:83:21
+(node:43892) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: ENOENT: no such file or directory, open './newFiles/file.html'
+    at Object.openSync (node:fs:585:3)
+    at Object.readFileSync (node:fs:453:35)
+    at C:\Sistema\routes\liquidations.router.js:83:21
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  errno: -4058,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: './newFiles/file.html'
 }
-Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
-    at new NodeError (node:internal/errors:371:5)
-    at ServerResponse.setHeader (node:_http_outgoing:576:11)
-    at ServerResponse.header (C:\Sistema\node_modules\express\lib\response.js:776:10)
-    at ServerResponse.send (C:\Sistema\node_modules\express\lib\response.js:170:12)
-    at ServerResponse.json (C:\Sistema\node_modules\express\lib\response.js:267:15)
-    at errorHandler (C:\Sistema\middlewares\error.handler.js:10:19)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
-    at next (C:\Sistema\node_modules\express\lib\router\index.js:275:10)
-    at boomErrorHandler (C:\Sistema\middlewares\error.handler.js:21:3)
-    at Layer.handle_error (C:\Sistema\node_modules\express\lib\router\layer.js:71:5)
-    at trim_prefix (C:\Sistema\node_modules\express\lib\router\index.js:321:13)
-    at C:\Sistema\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (C:\Sistema\node_modules\express\lib\router\index.js:341:12)
+ReferenceError: pdfPath is not defined
+    at C:\Sistema\routes\liquidations.router.js:84:32
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+ReferenceError: pdfPath is not defined
+    at C:\Sistema\routes\liquidations.router.js:84:32
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+(node:60652) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: Hubo un problema con la generacion del archivo
+    at zipAll (C:\Sistema\services\liquidation.service.js:382:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28
+Error: Hubo un problema con la generacion del zip
+    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
+    at async C:\Sistema\routes\liquidations.router.js:43:28

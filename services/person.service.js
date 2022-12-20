@@ -1,6 +1,7 @@
 const boom = require("@hapi/boom");
 const { models } = require("../libs/sequelize");
 const fs = require("fs");
+const { Op } = require("sequelize");
 
 class PersonService {
   constructor() {}
@@ -22,15 +23,18 @@ class PersonService {
   }
 
   async create(data) {
-    const persons = await models.Person.findAll();
-    let newPerson;
-    const alreadyExists = persons.filter((person) => person.cuit == data.cuit);
-    if (alreadyExists.length) {
-      await alreadyExists[0].update(data);
+    const persons = await models.Person.findAll({
+      where: {
+        cuit: {
+          [Op.eq]: data.cuit,
+        },
+      },
+    });
+    if (persons.length) {
+      return await persons[0].update(data);
     } else {
-      await models.Person.create(data);
+      return await models.Person.create(data);
     }
-    return newPerson;
   }
 
   async find() {

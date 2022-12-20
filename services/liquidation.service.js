@@ -1,10 +1,10 @@
 const boom = require("@hapi/boom");
 const { models } = require("../libs/sequelize");
-const BillService = require("./bill.service");
 const fs = require("fs");
-const billService = new BillService();
 const JSZip = require("jszip");
 const { Op } = require("sequelize");
+const pdf = require("html-pdf");
+
 const puppeteer = require("puppeteer");
 
 class LiquidationService {
@@ -60,7 +60,6 @@ class LiquidationService {
     }
     const retentionMonth = retentions.filter(
       (retention) =>
-        //retention.personId == data.personId &&
         retention.retentionDate.getFullYear() ==
           liquidationDate.getFullYear() &&
         retention.retentionDate.getMonth() == liquidationDate.getMonth() &&
@@ -206,11 +205,15 @@ class LiquidationService {
     }`.padStart(2, "0")}${firstSplit[1]}-6-R${secondSplit[0]}-${`${
       Number(secondSplit[1]) + 1
     }`.padStart(2, "0")}`;
-    try {
-      fs.writeFileSync(`${txtPath}.txt`, txt);
-    } catch (e) {
-      console.log("Cannot write file ", e);
-    }
+    const generateTxt = async () => {
+      try {
+        await fs.writeFileSync(`${txtPath}.txt`, txt);
+        return true;
+      } catch (e) {
+        console.log("Cannot write file ", e);
+        return false;
+      }
+    };
 
     const content = `
     <!doctype html>
@@ -302,16 +305,25 @@ class LiquidationService {
 
     const newHtmlFile = async () => {
       const path = `${pdfPath}.html`;
-      const file = fs.createWriteStream(path);
-      file.write(content);
-      return path;
+      try {
+        const file = fs.createWriteStream(path);
+        file.write(content);
+        return path;
+      } catch {
+        return false;
+      }
     };
 
     const pdfCreator = async () => {
       const htmlPath = await newHtmlFile();
       if (htmlPath) {
         try {
-          const browser = await puppeteer.launch();
+          const html = fs.readFileSync(htmlPath, "utf-8");
+          pdf.create(html).toFile(`${pdfPath}.pdf`, function (err, res) {
+            if (err) return console.log(err);
+            console.log(res); // { filename: '/app/businesscard.pdf' }
+          });
+          /*const browser = await puppeteer.launch();
           const page = await browser.newPage();
           const html = fs.readFileSync(htmlPath, "utf-8");
           await page.setContent(html, { waitUntil: "domcontentloaded" });
@@ -320,7 +332,7 @@ class LiquidationService {
             path: `${pdfPath}.pdf`,
             format: "A4",
           });
-          await browser.close();
+          await browser.close();*/
           return `${pdfPath}.pdf`;
         } catch (e) {
           console.log(e);
@@ -332,6 +344,7 @@ class LiquidationService {
     };
 
     const zipTxt = async () => {
+      await generateTxt();
       const txtZip = new JSZip();
       try {
         const txtData = fs.readFileSync(`${txtPath}.txt`);
@@ -533,20 +546,7 @@ class LiquidationService {
         </body>
     </html>
 `;
-    const newHtmlFile = () => {
-      const path = "./newFiles/file.html";
-      const file = fs.createWriteStream(path);
-      file.write(content);
-      return path;
-    };
-    return newHtmlFile();
-  }
-
-  async find() {
-    const rta = await models.Liquidation.findAll({
-      include: ["person"],
-    });
-    return rta;
+    return content;
   }
 
   async findOne(id) {

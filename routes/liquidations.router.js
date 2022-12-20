@@ -1,6 +1,7 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
 const fs = require("fs");
+const pdf = require("html-pdf");
 const zlib = require("zlib");
 const LiquidationService = require("../services/liquidation.service");
 const validatorHandler = require("../middlewares/validator.handler");
@@ -79,17 +80,10 @@ router.get("/report/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const newLiquidation = await service.report(id);
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    const html = fs.readFileSync(newLiquidation, "utf-8");
-    await page.setContent(html, { waitUntil: "domcontentloaded" });
-    await page.emulateMediaType("screen");
-    const pdf = await page.pdf({
-      path: "./newFiles/result.pdf",
-      format: "A4",
-    });
-    await browser.close();
-    res.send(pdf);
+    pdf.create(newLiquidation).toStream(function (err, stream) {
+      if (err) return console.log(err);
+      stream.pipe(res);
+    })
   } catch (error) {
     next(error);
   }

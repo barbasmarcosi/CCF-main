@@ -7,7 +7,8 @@ var svc = new Service({
   script: 'C:\\Sistema\\index.js',
   nodeOptions: [
     '--harmony',
-    '--max_old_space_size=4096'
+    '--max_old_space_size=4096',
+    
   ]
   //, workingDirectory: '...'
   //, allowServiceLogon: true

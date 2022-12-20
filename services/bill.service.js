@@ -53,7 +53,6 @@ class BillService {
         new Date(data.to) >= bill.billDate &&
         !bill.state
     );
-    console.log(!inDate.length);
     if (!inDate.length) {
       throw new Error("No se encontraron facturas en el periodo seleccionado");
     } else {
