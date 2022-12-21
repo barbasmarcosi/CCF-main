@@ -438,3 +438,25 @@ Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Li
 {
   filename: 'C:\\Sistema\\newFiles\\Liquidacion_de_AFIP_Periodo_2022-12_1.pdf'
 }
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id" WHERE "Liquidation"."id" = '4';
+Executing (default): SELECT "id", "billNumber", "billType", "registerType", "description", "initialAmount", "adminExpenses", "finalAmount", "billDate", "createdAt", "state", "personId" FROM "bills" AS "Bill" WHERE "Bill"."liquidationId" = '4';
+Executing (default): SELECT "id", "description", "amount", "createdAt", "state", "personId" FROM "creditNote" AS "CreditNote" WHERE "CreditNote"."liquidationId" = '4';
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+{
+  filename: 'C:\\Sistema\\newFiles\\Liquidacion_de_AFIP_Periodo_2022-12_1.pdf'
+}
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+{
+  filename: 'C:\\Sistema\\newFiles\\Liquidacion_de_AFIP_Periodo_2022-12_1.pdf'
+}
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+{
+  filename: 'C:\\Sistema\\newFiles\\Liquidacion_de_AFIP_Periodo_2022-12_1.pdf'
+}
+Executing (default): SELECT "Liquidation"."id", "Liquidation"."monthAmount", "Liquidation"."retention", "Liquidation"."retainedAmount", "Liquidation"."state", "Liquidation"."createdAt", "Liquidation"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "liquidations" AS "Liquidation" LEFT OUTER JOIN "persons" AS "person" ON "Liquidation"."personId" = "person"."id";
+{
+  filename: 'C:\\Sistema\\newFiles\\Liquidacion_de_AFIP_Periodo_2022-12_1.pdf'
+}
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000

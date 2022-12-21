@@ -297,3 +297,108 @@ Error: Hubo un problema con la generacion del zip
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
     at async C:\Sistema\routes\liquidations.router.js:43:28
+(node:7104) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:7136) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:7628) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1

@@ -41,6 +41,37 @@ router.get("/afip/:date", async (req, res, next) => {
   const { date } = req.params;
   try {
     const newLiquidation = await service.afip(date);
+    console.log(newLiquidation)
+    const checkTime = 1000;
+    const timerId = setInterval(() => {
+      const isExists = fs.existsSync(newLiquidation, "utf8");
+      if (isExists) {
+        clearInterval(timerId);
+        let headers = {
+          "Connection": "close", // intention
+          "Content-Encoding": "gzip",
+          // add some headers like Content-Type, Cache-Control, Last-Modified, ETag, X-Powered-By
+        };
+
+        let file = fs.readFileSync(newLiquidation); // sync is for readability
+        let gzip = zlib.gzipSync(file); // is instance of Uint8Array
+        headers["Content-Length"] = gzip.length; // not the file's size!!!
+
+        res.writeHead(200, headers);
+
+        let chunkLimit = 16 * 1024; // some clients choke on huge responses
+        let chunkCount = Math.ceil(gzip.length / chunkLimit);
+        for (let i = 0; i < chunkCount; i++) {
+          if (chunkCount > 1) {
+            let chunk = gzip.slice(i * chunkLimit, (i + 1) * chunkLimit);
+            res.write(chunk);
+          } else {
+            res.write(gzip);
+          }
+        }
+        res.end();
+      }
+    }, checkTime); /*
     setTimeout(() => {
       exists = fs.existsSync(newLiquidation);
       if (exists) {
@@ -70,7 +101,7 @@ router.get("/afip/:date", async (req, res, next) => {
       } else {
         throw new Error("Hubo un error, intentelo nuevamente");
       }
-    }, 3000);
+    }, 3000);*/
   } catch (error) {
     next(error);
   }
@@ -83,7 +114,7 @@ router.get("/report/:id", async (req, res, next) => {
     pdf.create(newLiquidation).toStream(function (err, stream) {
       if (err) return console.log(err);
       stream.pipe(res);
-    })
+    });
   } catch (error) {
     next(error);
   }

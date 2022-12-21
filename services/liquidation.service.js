@@ -303,81 +303,62 @@ class LiquidationService {
       firstSplit[1]
     )}`;
 
-    const newHtmlFile = async () => {
-      const path = `${pdfPath}.html`;
-      try {
-        const file = fs.createWriteStream(path);
-        file.write(content);
-        return path;
-      } catch {
-        return false;
-      }
-    };
-
     const pdfCreator = async () => {
-      const htmlPath = await newHtmlFile();
-      if (htmlPath) {
-        try {
-          const html = fs.readFileSync(htmlPath, "utf-8");
-          pdf.create(html).toFile(`${pdfPath}.pdf`, function (err, res) {
-            if (err) return console.log(err);
-            console.log(res); // { filename: '/app/businesscard.pdf' }
-          });
-          /*const browser = await puppeteer.launch();
-          const page = await browser.newPage();
-          const html = fs.readFileSync(htmlPath, "utf-8");
-          await page.setContent(html, { waitUntil: "domcontentloaded" });
-          await page.emulateMediaType("screen");
-          await page.pdf({
-            path: `${pdfPath}.pdf`,
-            format: "A4",
-          });
-          await browser.close();*/
-          return `${pdfPath}.pdf`;
-        } catch (e) {
-          console.log(e);
-          return false;
-        }
-      } else {
-        throw new Error("Fallo en pdf");
-      }
+      pdf.create(content).toStream(async (err, stream) => {
+        stream.pipe(fs.createWriteStream(`${pdfPath}.pdf`));
+      });
+      const checkTime = 1000;
+      const messageFile = `${pdfPath}.pdf`;
+      const timerId = new Promise((res, rej) => {
+        setInterval(() => {
+          const isExists = fs.existsSync(messageFile, "utf8");
+          if (isExists) {
+            clearInterval(timerId);
+            res(messageFile);
+          }
+        }, checkTime);
+      });
+      return await timerId;
     };
 
     const zipTxt = async () => {
       await generateTxt();
-      const txtZip = new JSZip();
-      try {
-        const txtData = fs.readFileSync(`${txtPath}.txt`);
-        txtZip.file(`${txtPath}.txt`.split("/")[1], txtData);
-        txtZip
-          .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-          .pipe(fs.createWriteStream(`${txtPath}.zip`));
-        return `${txtPath}.zip`;
-      } catch (err) {
-        console.error(err);
-        return false;
-      }
+      const checkTime = 1000;
+      const messageFile = `${txtPath}.txt`;
+      const timerId = new Promise((res, rej) => {
+        setInterval(() => {
+          const isExists = fs.existsSync(messageFile, "utf8");
+          if (isExists) {
+            clearInterval(timerId);
+            const txtZip = new JSZip();
+            const txtData = fs.readFileSync(`${txtPath}.txt`);
+            txtZip.file(`${txtPath}.txt`.split("/")[1], txtData);
+            txtZip
+              .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+              .pipe(fs.createWriteStream(`${txtPath}.zip`));
+            res(`${txtPath}.zip`);
+          }
+        }, checkTime);
+      });
+      return await timerId;
     };
 
     const zipAll = async () => {
-      const zip = new JSZip();
       const pdf = await pdfCreator();
       const txt = await zipTxt();
-
+      const zip = new JSZip();
+      console.log(pdf, txt);
       if (pdf && txt) {
-        try {
-          const txtZippedPath = fs.ReadStream(txt);
-          const pdfData = fs.readFileSync(pdf);
-          zip.file(`${txtPath}.zip`.split("/")[1], txtZippedPath);
-          zip.file(`${pdfPath}.pdf`.split("/")[1], pdfData);
-          zip
-            .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-            .pipe(fs.createWriteStream(`${pdfPath}.zip`));
-          return `${pdfPath}.zip`;
-        } catch (err) {
-          console.log(err);
-          throw new Error("Hubo un problema con la generacion del zip");
-        }
+        //try {
+        const txtZippedPath = fs.ReadStream(txt);
+        const pdfData = fs.readFileSync(pdf);
+        console.log(`${txt}`.split("/")[1], `${pdf}`.split("/")[1]);
+        zip.file(`${txt}`.split("/")[1], txtZippedPath);
+        zip.file(`${pdf}`.split("/")[1], pdfData);
+        zip
+          .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+          .pipe(fs.createWriteStream(`${pdfPath}.zip`));
+        return `${pdfPath}.zip`;
       } else {
         throw new Error("Hubo un problema con la generacion del archivo");
       }
@@ -555,6 +536,13 @@ class LiquidationService {
       throw boom.notFound("Liquidation not found");
     }
     return liquidation;
+  }
+
+  async find() {
+    const liquidations = await models.Liquidation.findAll({
+      include: ["person"],
+    });
+    return liquidations;
   }
 
   async update(id, changes) {
