@@ -32,6 +32,10 @@ const LiquidationSchema =  {
     type: DataTypes.DATE,
     defaultValue: Sequelize.NOW,
   },
+  detail: {
+    allowNull: false,
+    type: DataTypes.TEXT,
+  },
   personId: {
     allowNull: false,
     type: DataTypes.INTEGER,

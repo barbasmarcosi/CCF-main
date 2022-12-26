@@ -50,7 +50,9 @@ class LiquidationService {
     const pendentCreditNotes = creditNotes.filter(
       (creditNote) => !creditNote.state && !creditNote.liquidationId
     );
-    console.log(pendentCreditNotes);
+    const cnArray = [];
+    pendentCreditNotes.map((cn) => cnArray.push(cn.id));
+    console.log(cnArray);
     let creditNotesAmount = 0;
     if (pendentCreditNotes.length) {
       creditNotesAmount = pendentCreditNotes.reduce(
@@ -89,10 +91,12 @@ class LiquidationService {
           bill.personId == data.personId && !bill.state && !bill.liquidationId
         );
       });
+      const billsArray = [];
       if (monthBills.length) {
         try {
           let total = 0;
           monthBills.map(async (bill) => {
+            billsArray.push(bill.id);
             total =
               total +
               (bill.finalAmount -
@@ -123,6 +127,7 @@ class LiquidationService {
               personId: data.personId,
               retention: retention,
               state: false,
+              detail: JSON.stringify([billsArray, cnArray]),
             });
             const id = liquidations.length + 1;
             monthBills.map(async (bill) => {

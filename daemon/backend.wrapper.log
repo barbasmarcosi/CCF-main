@@ -96,3 +96,7 @@
 2022-12-20 12:50:16 - Finished backend.exe
 2022-12-21 07:16:16 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2022-12-21 07:16:16 - Started 5936
+2022-12-22 07:18:53 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-12-22 07:18:53 - Started 5920
+2022-12-26 07:10:17 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-12-26 07:10:17 - Started 5608
