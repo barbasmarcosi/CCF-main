@@ -42,6 +42,7 @@ class RetentionService {
   async find() {
     const rta = await models.Retention.findAll({
       include: ["person"],
+      order: [["createdAt", "DESC"]],
     });
     return rta;
   }

@@ -598,6 +598,7 @@ class LiquidationService {
   async find() {
     const liquidations = await models.Liquidation.findAll({
       include: ["person"],
+      order: [["createdAt", "DESC"]],
     });
     return liquidations;
   }

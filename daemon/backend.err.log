@@ -315,3 +315,15 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
+(node:20632) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:42872) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: Order must be type of array or instance of a valid sequelize method.
+    at PostgresQueryGenerator.getQueryOrders (C:\Sistema\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2075:13)
+    at PostgresQueryGenerator.selectQuery (C:\Sistema\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1366:27)
+    at PostgresQueryInterface.select (C:\Sistema\node_modules\sequelize\lib\dialects\abstract\query-interface.js:954:27)
+    at Function.findAll (C:\Sistema\node_modules\sequelize\lib\model.js:1753:47)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BillService.find (C:\Sistema\services\bill.service.js:31:17)
+    at async C:\Sistema\routes\bills.router.js:16:19

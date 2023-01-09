@@ -29,6 +29,7 @@ class CreditNoteService {
   async find() {
     const rta = await models.CreditNote.findAll({
       include: ["person"],
+      order: [["createdAt", "DESC"]],
     });
     return rta;
   }

@@ -39,7 +39,9 @@ class PersonService {
   }
 
   async find() {
-    const rta = await models.Person.findAll();
+    const rta = await models.Person.findAll({
+      order: [["createdAt", "DESC"]],
+    });
     return rta;
   }
 

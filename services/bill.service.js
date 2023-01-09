@@ -10,12 +10,11 @@ class BillService {
     const backup = bills
       .map(
         (bill) =>
-          `INSERT INTO bills VALUES (${Object.entries(
-            bill.dataValues
-          ).map((entry) =>
-            entry[0] == "createdAt" || entry[0] == "billDate"
-              ? `'${new Date(entry[1]).toISOString()}'`
-              : `'${entry[1]}'`
+          `INSERT INTO bills VALUES (${Object.entries(bill.dataValues).map(
+            (entry) =>
+              entry[0] == "createdAt" || entry[0] == "billDate"
+                ? `'${new Date(entry[1]).toISOString()}'`
+                : `'${entry[1]}'`
           )})`
       )
       .join(";\n");
@@ -30,6 +29,7 @@ class BillService {
   async find() {
     const rta = await models.Bill.findAll({
       include: ["person"],
+      order: [["createdAt", "DESC"]],
     });
     return rta;
   }
@@ -150,9 +150,7 @@ class BillService {
       await bill.update({ state: true });
     } else {
       if (bill.state) {
-        throw boom.notFound(
-          "La factura ya se encuentra anulada"
-        );
+        throw boom.notFound("La factura ya se encuentra anulada");
       }
       throw boom.notFound(
         "No se puede anular porque la factura se encuentra liquidada"

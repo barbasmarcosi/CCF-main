@@ -20,3 +20,35 @@ Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2023-01-06 07:15:39 - Started 5852
 2023-01-09 07:09:45 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2023-01-09 07:09:46 - Started 5904
+2023-01-09 10:25:36 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-09 10:25:36 - Started 40864
+2023-01-09 10:31:20 - Stopping backend.exe
+2023-01-09 10:31:20 - ProcessKill 40864
+2023-01-09 10:31:20 - Found child process: 24016 Name: conhost.exe
+2023-01-09 10:31:20 - Found child process: 20632 Name: node.exe
+2023-01-09 10:31:20 - Stopping process 24016
+2023-01-09 10:31:20 - Send SIGINT 24016
+2023-01-09 10:31:20 - SIGINT to 24016 failed - Killing as fallback
+2023-01-09 10:31:20 - Stopping process 20632
+2023-01-09 10:31:20 - Send SIGINT 20632
+2023-01-09 10:31:20 - SIGINT to 20632 failed - Killing as fallback
+2023-01-09 10:31:20 - Stopping process 40864
+2023-01-09 10:31:20 - Send SIGINT 40864
+2023-01-09 10:31:20 - SIGINT to 40864 failed - Killing as fallback
+2023-01-09 10:31:20 - Finished backend.exe
+2023-01-09 10:31:21 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-09 10:31:21 - Started 33848
+2023-01-09 10:33:34 - Stopping backend.exe
+2023-01-09 10:33:34 - ProcessKill 33848
+2023-01-09 10:33:34 - Found child process: 38616 Name: conhost.exe
+2023-01-09 10:33:34 - Found child process: 42872 Name: node.exe
+2023-01-09 10:33:35 - Stopping process 38616
+2023-01-09 10:33:35 - Send SIGINT 38616
+2023-01-09 10:33:35 - SIGINT to 38616 failed - Killing as fallback
+2023-01-09 10:33:35 - Stopping process 42872
+2023-01-09 10:33:35 - Send SIGINT 42872
+2023-01-09 10:33:35 - SIGINT to 42872 failed - Killing as fallback
+2023-01-09 10:33:35 - Stopping process 33848
+2023-01-09 10:33:35 - Send SIGINT 33848
+2023-01-09 10:33:35 - SIGINT to 33848 failed - Killing as fallback
+2023-01-09 10:33:35 - Finished backend.exe
