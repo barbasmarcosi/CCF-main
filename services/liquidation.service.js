@@ -1,11 +1,10 @@
 const boom = require("@hapi/boom");
+const moment = require("moment");
 const { models } = require("../libs/sequelize");
 const fs = require("fs");
 const JSZip = require("jszip");
 const { Op } = require("sequelize");
 const pdf = require("html-pdf");
-
-const puppeteer = require("puppeteer");
 
 class LiquidationService {
   constructor() {}
@@ -28,31 +27,59 @@ class LiquidationService {
   }
 
   async create(data) {
+    const liquidationDate = new Date();
+    const maxAllowed = Number(data.maxAllowed);
+    const interestedDate = `${liquidationDate.getFullYear()}-${`${
+      Number(liquidationDate.getMonth()) + 1
+    }`.padStart(2, "0")}-%`;
+    //console.log(interestedDate);
     let res = false;
     const retentions = await models.Retention.findAll({
       where: {
         personId: {
           [Op.eq]: data.personId,
         },
+        retentionDate: {
+          [Op.gte]: moment().subtract(0, "months").toDate(),
+        },
+        state: {
+          [Op.is]: false,
+        },
       },
     });
-    const liquidations = await models.Liquidation.findAll();
+    //console.log("retentions ", retentions);
+    const liquidations = await models.Liquidation.findAll({
+      where: {
+        personId: {
+          [Op.eq]: data.personId,
+        },
+        state: {
+          [Op.is]: false,
+        },
+      },
+    });
+    //console.log("liquidations ", liquidations, liquidations.length);
     const creditNotes = await models.CreditNote.findAll({
       where: {
         personId: {
           [Op.eq]: data.personId,
         },
+        state: {
+          [Op.is]: false,
+        },
+        liquidationId: {
+          [Op.is]: null,
+        },
       },
     });
-    console.log(creditNotes);
-    const liquidationDate = new Date();
-    const maxAllowed = Number(data.maxAllowed);
+    //console.log("credit notes ", creditNotes);
+
     const pendentCreditNotes = creditNotes.filter(
       (creditNote) => !creditNote.state && !creditNote.liquidationId
     );
     const cnArray = [];
     pendentCreditNotes.map((cn) => cnArray.push(cn.id));
-    console.log(cnArray);
+    //console.log(cnArray);
     let creditNotesAmount = 0;
     if (pendentCreditNotes.length) {
       creditNotesAmount = pendentCreditNotes.reduce(
@@ -68,7 +95,20 @@ class LiquidationService {
         !retention.state
     );
     if (retentionMonth.length) {
-      const bills = await models.Bill.findAll();
+      const bills = await models.Bill.findAll({
+        where: {
+          personId: {
+            [Op.eq]: data.personId,
+          },
+          liquidationId: {
+            [Op.is]: null,
+          },
+          state: {
+            [Op.is]: false,
+          },
+        },
+      });
+      //console.log("bills ", bills);
       const verifyMax = bills.filter((bill) => bill.personId == data.personId);
       const prevLiq = liquidations.filter(
         (liquidation) =>
@@ -91,6 +131,21 @@ class LiquidationService {
           bill.personId == data.personId && !bill.state && !bill.liquidationId
         );
       });
+      //console.log(monthAmount);
+      const updateLiquidationId = async (id) => {
+        monthBills.map(async (bill) => {
+          await bill.update({
+            liquidationId: id,
+          });
+        });
+        if (pendentCreditNotes.length) {
+          pendentCreditNotes.map(async (creditNote) => {
+            await creditNote.update({
+              liquidationId: id,
+            });
+          });
+        }
+      };
       const billsArray = [];
       if (monthBills.length) {
         try {
@@ -104,15 +159,22 @@ class LiquidationService {
           });
           let retainedAmount;
           let retention;
-          if (monthAmount >= maxAllowed && prevLiqAmount == 0) {
-            retainedAmount = (total - maxAllowed) * retentionMonth[0].retention;
+          const retentionPercentage = Number(retentionMonth[0].retention * 100);
+          //console.log((maxAllowed * 100) / retentionPercentage);
+          const newMaxAllowed = Number(
+            (maxAllowed * 100) / retentionPercentage
+          );
+          //console.log(monthAmount, newMaxAllowed, prevLiqAmount)
+          if (monthAmount >= newMaxAllowed && prevLiqAmount == 0) {
+            retainedAmount =
+              (total - newMaxAllowed) * retentionMonth[0].retention;
             retention = retentionMonth[0].retention * 100;
-          } else if (prevLiqAmount > maxAllowed) {
+          } else if (prevLiqAmount > newMaxAllowed) {
             retainedAmount = total * retentionMonth[0].retention;
             retention = retentionMonth[0].retention * 100;
-          } else if (prevLiqAmount <= maxAllowed) {
+          } else if (prevLiqAmount <= newMaxAllowed) {
             retainedAmount =
-              (total - (maxAllowed - prevLiqAmount)) *
+              (total - (newMaxAllowed - prevLiqAmount)) *
               retentionMonth[0].retention;
             retention = retentionMonth[0].retention * 100;
           } else {
@@ -128,20 +190,10 @@ class LiquidationService {
               retention: retention,
               state: false,
               detail: JSON.stringify([billsArray, cnArray]),
+            }).then(async (result) => {
+              //console.log(result.id);
+              await updateLiquidationId(result.id);
             });
-            const id = liquidations.length + 1;
-            monthBills.map(async (bill) => {
-              await bill.update({
-                liquidationId: id,
-              });
-            });
-            if (pendentCreditNotes.length) {
-              pendentCreditNotes.map(async (creditNote) => {
-                await creditNote.update({
-                  liquidationId: id,
-                });
-              });
-            }
           }
         } catch (e) {
           throw boom.internal("Hubo un error interno, vuleva a intentar luego");
@@ -215,7 +267,7 @@ class LiquidationService {
         await fs.writeFileSync(`${txtPath}.txt`, txt);
         return true;
       } catch (e) {
-        console.log("Cannot write file ", e);
+       // console.log("Cannot write file ", e);
         return false;
       }
     };
@@ -352,12 +404,12 @@ class LiquidationService {
       const pdf = await pdfCreator();
       const txt = await zipTxt();
       const zip = new JSZip();
-      console.log(pdf, txt);
+      //console.log(pdf, txt);
       if (pdf && txt) {
         //try {
         const txtZippedPath = fs.ReadStream(txt);
         const pdfData = fs.readFileSync(pdf);
-        console.log(`${txt}`.split("/")[1], `${pdf}`.split("/")[1]);
+        //console.log(`${txt}`.split("/")[1], `${pdf}`.split("/")[1]);
         zip.file(`${txt}`.split("/")[1], txtZippedPath);
         zip.file(`${pdf}`.split("/")[1], pdfData);
         zip

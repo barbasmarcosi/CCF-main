@@ -1,102 +1,22 @@
-2022-12-20 11:06:58 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 11:06:58 - Started 47652
-2022-12-20 11:08:01 - Stopping backend.exe
-2022-12-20 11:08:01 - ProcessKill 47652
-2022-12-20 11:08:01 - Found child process: 38416 Name: conhost.exe
-2022-12-20 11:08:01 - Found child process: 46608 Name: node.exe
-2022-12-20 11:08:01 - Stopping process 38416
-2022-12-20 11:08:01 - Send SIGINT 38416
-2022-12-20 11:08:01 - SIGINT to 38416 failed - Killing as fallback
-2022-12-20 11:08:01 - Stopping process 46608
-2022-12-20 11:08:01 - Send SIGINT 46608
-2022-12-20 11:08:01 - SIGINT to 46608 failed - Killing as fallback
-2022-12-20 11:08:01 - Stopping process 47652
-2022-12-20 11:08:01 - Send SIGINT 47652
-2022-12-20 11:08:01 - SIGINT to 47652 failed - Killing as fallback
-2022-12-20 11:08:01 - Finished backend.exe
-2022-12-20 11:17:38 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 11:17:38 - Started 49272
-2022-12-20 11:23:24 - Stopping backend.exe
-2022-12-20 11:23:24 - ProcessKill 49272
-2022-12-20 11:23:25 - Found child process: 49176 Name: conhost.exe
-2022-12-20 11:23:25 - Found child process: 34128 Name: node.exe
-2022-12-20 11:23:25 - Stopping process 49176
-2022-12-20 11:23:25 - Send SIGINT 49176
-2022-12-20 11:23:25 - SIGINT to 49176 failed - Killing as fallback
-2022-12-20 11:23:25 - Stopping process 34128
-2022-12-20 11:23:25 - Send SIGINT 34128
-2022-12-20 11:23:25 - SIGINT to 34128 failed - Killing as fallback
-2022-12-20 11:23:25 - Stopping process 49272
-2022-12-20 11:23:25 - Send SIGINT 49272
-2022-12-20 11:23:25 - SIGINT to 49272 failed - Killing as fallback
-2022-12-20 11:23:25 - Finished backend.exe
-2022-12-20 11:23:30 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 11:23:30 - Started 49884
-2022-12-20 11:28:59 - Stopping backend.exe
-2022-12-20 11:28:59 - ProcessKill 49884
-2022-12-20 11:28:59 - Found child process: 45808 Name: conhost.exe
-2022-12-20 11:28:59 - Found child process: 41120 Name: node.exe
-2022-12-20 11:28:59 - Stopping process 45808
-2022-12-20 11:28:59 - Send SIGINT 45808
-2022-12-20 11:28:59 - SIGINT to 45808 failed - Killing as fallback
-2022-12-20 11:28:59 - Stopping process 41120
-2022-12-20 11:28:59 - Send SIGINT 41120
-2022-12-20 11:28:59 - SIGINT to 41120 failed - Killing as fallback
-2022-12-20 11:28:59 - Stopping process 49884
-2022-12-20 11:28:59 - Send SIGINT 49884
-2022-12-20 11:28:59 - SIGINT to 49884 failed - Killing as fallback
-2022-12-20 11:28:59 - Finished backend.exe
-2022-12-20 11:29:04 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 11:29:04 - Started 45736
-2022-12-20 11:32:15 - Stopping backend.exe
-2022-12-20 11:32:15 - ProcessKill 45736
-2022-12-20 11:32:15 - Found child process: 47772 Name: conhost.exe
-2022-12-20 11:32:15 - Found child process: 39556 Name: node.exe
-2022-12-20 11:32:16 - Stopping process 47772
-2022-12-20 11:32:16 - Send SIGINT 47772
-2022-12-20 11:32:16 - SIGINT to 47772 failed - Killing as fallback
-2022-12-20 11:32:16 - Stopping process 39556
-2022-12-20 11:32:16 - Send SIGINT 39556
-2022-12-20 11:32:16 - SIGINT to 39556 failed - Killing as fallback
-2022-12-20 11:32:16 - Stopping process 45736
-2022-12-20 11:32:16 - Send SIGINT 45736
-2022-12-20 11:32:16 - SIGINT to 45736 failed - Killing as fallback
-2022-12-20 11:32:16 - Finished backend.exe
-2022-12-20 11:32:17 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 11:32:17 - Started 50948
-2022-12-20 11:32:54 - Stopping backend.exe
-2022-12-20 11:32:54 - ProcessKill 50948
-2022-12-20 11:32:54 - Found child process: 50960 Name: conhost.exe
-2022-12-20 11:32:54 - Found child process: 43892 Name: node.exe
-2022-12-20 11:32:54 - Stopping process 50960
-2022-12-20 11:32:54 - Send SIGINT 50960
-2022-12-20 11:32:54 - SIGINT to 50960 failed - Killing as fallback
-2022-12-20 11:32:54 - Stopping process 43892
-2022-12-20 11:32:54 - Send SIGINT 43892
-2022-12-20 11:32:54 - SIGINT to 43892 failed - Killing as fallback
-2022-12-20 11:32:54 - Stopping process 50948
-2022-12-20 11:32:54 - Send SIGINT 50948
-2022-12-20 11:32:54 - SIGINT to 50948 failed - Killing as fallback
-2022-12-20 11:32:54 - Finished backend.exe
-2022-12-20 12:40:27 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-20 12:40:27 - Started 59748
-2022-12-20 12:50:16 - Stopping backend.exe
-2022-12-20 12:50:16 - ProcessKill 59748
-2022-12-20 12:50:16 - Found child process: 57936 Name: conhost.exe
-2022-12-20 12:50:16 - Found child process: 60652 Name: node.exe
-2022-12-20 12:50:16 - Stopping process 57936
-2022-12-20 12:50:16 - Send SIGINT 57936
-2022-12-20 12:50:16 - SIGINT to 57936 failed - Killing as fallback
-2022-12-20 12:50:16 - Stopping process 60652
-2022-12-20 12:50:16 - Send SIGINT 60652
-2022-12-20 12:50:16 - SIGINT to 60652 failed - Killing as fallback
-2022-12-20 12:50:16 - Stopping process 59748
-2022-12-20 12:50:16 - Send SIGINT 59748
-2022-12-20 12:50:16 - SIGINT to 59748 failed - Killing as fallback
-2022-12-20 12:50:16 - Finished backend.exe
-2022-12-21 07:16:16 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-21 07:16:16 - Started 5936
-2022-12-22 07:18:53 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-22 07:18:53 - Started 5920
-2022-12-26 07:10:17 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
-2022-12-26 07:10:17 - Started 5608
+2023-01-05 11:59:22 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-05 11:59:22 - Started 174136
+2023-01-05 12:37:33 - Stopping backend.exe
+2023-01-05 12:37:33 - ProcessKill 174136
+2023-01-05 12:37:33 - Shutdown exception
+Message:Se está cerrando el sistema.
+
+Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   en System.Management.ManagementScope.InitializeGuts(Object o)
+   en System.Management.ManagementScope.Initialize()
+   en System.Management.ManagementObjectSearcher.Initialize()
+   en System.Management.ManagementObjectSearcher.Get()
+   en winsw.WrapperService.GetChildPids(Int32 pid)
+   en winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   en winsw.WrapperService.StopIt()
+   en winsw.WrapperService.OnShutdown()
+2023-01-05 12:38:05 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-05 12:38:05 - Started 5644
+2023-01-06 07:15:39 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-06 07:15:39 - Started 5852
+2023-01-09 07:09:45 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-09 07:09:46 - Started 5904

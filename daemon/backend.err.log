@@ -1,303 +1,6 @@
-(node:46608) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:167164) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:82:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:82:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:82:21
-Error: Hubo un problema con la generacion del archivo
-    at zipAll (C:\Sistema\services\liquidation.service.js:366:15)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:369:17)
-    at async C:\Sistema\routes\liquidations.router.js:42:28
-(node:34128) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Hubo un problema con la generacion del archivo
-    at zipAll (C:\Sistema\services\liquidation.service.js:373:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:370:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:376:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-(node:41120) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Hubo un problema con la generacion del archivo
-    at zipAll (C:\Sistema\services\liquidation.service.js:377:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:374:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:380:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-(node:39556) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: Hubo un problema con la generacion del archivo
-    at zipAll (C:\Sistema\services\liquidation.service.js:382:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-Error: Could not find Chromium (rev. 1069273). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: C:\WINDOWS\system32\config\systemprofile\.cache\puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:120:27)
-    at ChromeLauncher.executablePath (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:166:25)
-    at ChromeLauncher.launch (C:\Sistema\node_modules\puppeteer\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:70:37)
-    at async C:\Sistema\routes\liquidations.router.js:83:21
-(node:43892) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: ENOENT: no such file or directory, open './newFiles/file.html'
-    at Object.openSync (node:fs:585:3)
-    at Object.readFileSync (node:fs:453:35)
-    at C:\Sistema\routes\liquidations.router.js:83:21
-    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-  errno: -4058,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: './newFiles/file.html'
-}
-ReferenceError: pdfPath is not defined
-    at C:\Sistema\routes\liquidations.router.js:84:32
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-ReferenceError: pdfPath is not defined
-    at C:\Sistema\routes\liquidations.router.js:84:32
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-(node:60652) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Error: Hubo un problema con la generacion del archivo
-    at zipAll (C:\Sistema\services\liquidation.service.js:382:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-Error: Hubo un problema con la generacion del zip
-    at zipAll (C:\Sistema\services\liquidation.service.js:379:17)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async LiquidationService.afip (C:\Sistema\services\liquidation.service.js:385:17)
-    at async C:\Sistema\routes\liquidations.router.js:43:28
-(node:7104) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:6332) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -332,7 +35,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:7136) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:9768) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -367,7 +70,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:7628) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:10428) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -402,7 +105,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:6636) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:7096) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -437,7 +140,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:6640) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:7464) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -472,7 +175,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:9304) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:8444) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -507,7 +210,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:6628) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:6708) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -542,7 +245,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:8920) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:8620) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));
@@ -577,7 +280,7 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
-(node:10544) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(node:5892) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
 C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
                 reject(new sequelizeErrors.ConnectionRefusedError(err));

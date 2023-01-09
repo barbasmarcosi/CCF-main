@@ -2,7 +2,7 @@
 	<id>backend.exe</id>
 	<name>Backend</name>
 	<description>Backend server</description>
-	<executable>C:\Program Files\nodejs\node.exe</executable>
+	<executable>C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe</executable>
 	<argument>--harmony</argument>
 	<argument>--max_old_space_size=4096</argument>
 	<argument>C:\Sistema\node_modules\node-windows\lib\wrapper.js</argument>
