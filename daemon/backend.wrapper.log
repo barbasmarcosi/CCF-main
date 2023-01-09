@@ -52,3 +52,5 @@ Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2023-01-09 10:33:35 - Send SIGINT 33848
 2023-01-09 10:33:35 - SIGINT to 33848 failed - Killing as fallback
 2023-01-09 10:33:35 - Finished backend.exe
+2023-01-09 10:39:30 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-09 10:39:30 - Started 45240

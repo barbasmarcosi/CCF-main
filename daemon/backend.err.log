@@ -327,3 +327,5 @@ Error: Order must be type of array or instance of a valid sequelize method.
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async BillService.find (C:\Sistema\services\bill.service.js:31:17)
     at async C:\Sistema\routes\bills.router.js:16:19
+(node:44168) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)

@@ -39,9 +39,9 @@ class LiquidationService {
         personId: {
           [Op.eq]: data.personId,
         },
-        retentionDate: {
+        /*retentionDate: {
           [Op.gte]: moment().subtract(0, "months").toDate(),
-        },
+        },*/
         state: {
           [Op.is]: false,
         },
