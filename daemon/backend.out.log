@@ -534,3 +534,15 @@ Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retentio
 Executing (default): SELECT "CreditNote"."id", "CreditNote"."description", "CreditNote"."amount", "CreditNote"."createdAt", "CreditNote"."state", "CreditNote"."personId", "CreditNote"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "creditNote" AS "CreditNote" LEFT OUTER JOIN "persons" AS "person" ON "CreditNote"."personId" = "person"."id" ORDER BY "CreditNote"."createdAt" DESC;
 Executing (default): SELECT "Retention"."id", "Retention"."retention", "Retention"."annulled" AS "state", "Retention"."retentionDate", "Retention"."createdAt", "Retention"."personId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "retentions" AS "Retention" LEFT OUTER JOIN "persons" AS "person" ON "Retention"."personId" = "person"."id" ORDER BY "Retention"."createdAt" DESC;
 Executing (default): SELECT "CreditNote"."id", "CreditNote"."description", "CreditNote"."amount", "CreditNote"."createdAt", "CreditNote"."state", "CreditNote"."personId", "CreditNote"."liquidationId", "person"."id" AS "person.id", "person"."registration" AS "person.registration", "person"."cuit" AS "person.cuit", "person"."lastName" AS "person.lastName", "person"."name" AS "person.name", "person"."email" AS "person.email", "person"."city" AS "person.city", "person"."party" AS "person.party", "person"."address" AS "person.address", "person"."phone" AS "person.phone", "person"."state" AS "person.state", "person"."createdAt" AS "person.createdAt" FROM "creditNote" AS "CreditNote" LEFT OUTER JOIN "persons" AS "person" ON "CreditNote"."personId" = "person"."id" ORDER BY "CreditNote"."createdAt" DESC;
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000
+On port http://localhost:5000

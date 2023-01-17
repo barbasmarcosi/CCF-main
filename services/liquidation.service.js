@@ -161,22 +161,27 @@ class LiquidationService {
           let retention;
           const retentionPercentage = Number(retentionMonth[0].retention * 100);
           //console.log((maxAllowed * 100) / retentionPercentage);
-          const newMaxAllowed = Number(
-            (maxAllowed * 100) / retentionPercentage
-          );
+          const newMaxAllowed =
+            retentionPercentage != 0
+              ? Number((maxAllowed * 100) / retentionPercentage)
+              : 0;
           //console.log(monthAmount, newMaxAllowed, prevLiqAmount)
           if (monthAmount >= newMaxAllowed && prevLiqAmount == 0) {
             retainedAmount =
               (total - newMaxAllowed) * retentionMonth[0].retention;
-            retention = retentionMonth[0].retention * 100;
+            retention = retentionPercentage;
           } else if (prevLiqAmount > newMaxAllowed) {
             retainedAmount = total * retentionMonth[0].retention;
-            retention = retentionMonth[0].retention * 100;
-          } else if (prevLiqAmount <= newMaxAllowed) {
+            retention = retentionPercentage;
+          } else if (
+            prevLiqAmount <= newMaxAllowed &&
+            prevLiqAmount != 0 &&
+            total + prevLiqAmount > newMaxAllowed
+          ) {
             retainedAmount =
-              (total - (newMaxAllowed - prevLiqAmount)) *
+              (total + prevLiqAmount -  newMaxAllowed) *
               retentionMonth[0].retention;
-            retention = retentionMonth[0].retention * 100;
+            retention = retentionPercentage;
           } else {
             retainedAmount = 0;
             retention = 0;
@@ -267,7 +272,7 @@ class LiquidationService {
         await fs.writeFileSync(`${txtPath}.txt`, txt);
         return true;
       } catch (e) {
-       // console.log("Cannot write file ", e);
+        // console.log("Cannot write file ", e);
         return false;
       }
     };

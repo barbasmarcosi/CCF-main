@@ -54,3 +54,25 @@ Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2023-01-09 10:33:35 - Finished backend.exe
 2023-01-09 10:39:30 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2023-01-09 10:39:30 - Started 45240
+2023-01-09 12:09:26 - Stopping backend.exe
+2023-01-09 12:09:26 - ProcessKill 45240
+2023-01-09 12:09:26 - Shutdown exception
+Message:Se está cerrando el sistema.
+
+Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   en System.Management.ManagementScope.InitializeGuts(Object o)
+   en System.Management.ManagementScope.Initialize()
+   en System.Management.ManagementObjectSearcher.Initialize()
+   en System.Management.ManagementObjectSearcher.Get()
+   en winsw.WrapperService.GetChildPids(Int32 pid)
+   en winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   en winsw.WrapperService.StopIt()
+   en winsw.WrapperService.OnShutdown()
+2023-01-09 12:09:52 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-09 12:09:52 - Started 5744
+2023-01-11 00:16:29 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-11 00:16:29 - Started 5664
+2023-01-16 12:07:27 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-16 12:07:28 - Started 14012
+2023-01-16 12:47:28 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-16 12:47:28 - Started 5748
