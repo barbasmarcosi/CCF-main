@@ -170,6 +170,7 @@ class LiquidationService {
             retainedAmount =
               (total - newMaxAllowed) * retentionMonth[0].retention;
             retention = retentionPercentage;
+            retention = retentionPercentage;
           } else if (prevLiqAmount > newMaxAllowed) {
             retainedAmount = total * retentionMonth[0].retention;
             retention = retentionPercentage;
@@ -272,7 +273,7 @@ class LiquidationService {
         await fs.writeFileSync(`${txtPath}.txt`, txt);
         return true;
       } catch (e) {
-        // console.log("Cannot write file ", e);
+         // console.log("Cannot write file ", e);
         return false;
       }
     };
