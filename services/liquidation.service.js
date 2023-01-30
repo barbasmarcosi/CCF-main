@@ -519,7 +519,7 @@ class LiquidationService {
                        retention.billNumber
                      }</td>
                      <td style="border: 1px solid black;" >${new Date(
-                       retention.billDate
+                       moment(retention.billDate).add(7, 'hours')
                      ).toLocaleDateString()}</td>
                      <td style="border: 1px solid black;" >$${
                        retention.initialAmount

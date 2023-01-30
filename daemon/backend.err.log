@@ -749,3 +749,430 @@ ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED :
 }
 
 Node.js v17.3.1
+(node:6404) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:8868) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:9156) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:6664) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:8712) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:10252) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:664) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:7424) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:9044) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:4580) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+UniqueConstraintError [SequelizeUniqueConstraintError]: Validation error
+    at Query.formatError (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\query.js:344:18)
+    at Query.run (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\query.js:87:18)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Sistema\node_modules\sequelize\lib\sequelize.js:619:16
+    at async PostgresQueryInterface.insert (C:\Sistema\node_modules\sequelize\lib\dialects\abstract\query-interface.js:749:21)
+    at async Bill.save (C:\Sistema\node_modules\sequelize\lib\model.js:3967:35)
+    at async Function.create (C:\Sistema\node_modules\sequelize\lib\model.js:2207:12)
+    at async BillService.create (C:\Sistema\services\bill.service.js:25:17)
+    at async C:\Sistema\routes\bills.router.js:43:23 {
+  errors: [
+    ValidationErrorItem {
+      message: 'billNumber must be unique',
+      type: 'unique violation',
+      path: 'billNumber',
+      value: '00016-00068616',
+      origin: 'DB',
+      instance: [Bill],
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  fields: { billNumber: '00016-00068616' },
+  parent: error: duplicate key value violates unique constraint "bills_billNumber_key"
+      at Parser.parseErrorMessage (C:\Sistema\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Sistema\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Sistema\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      at readableAddChunk (node:internal/streams/readable:297:9)
+      at Socket.Readable.push (node:internal/streams/readable:234:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 223,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key ("billNumber")=(00016-00068616) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'bills',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'bills_billNumber_key',
+    file: 'nbtinsert.c',
+    line: '649',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "bills" ("id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId","liquidationId";',
+    parameters: [
+      '00016-00068616',
+      'C',
+      'Factura',
+      '1651',
+      '1234',
+      '2',
+      '1234',
+      '2023-01-30 00:00:00.000 +00:00',
+      '2023-01-30 15:38:17.909 +00:00',
+      false,
+      407
+    ]
+  },
+  original: error: duplicate key value violates unique constraint "bills_billNumber_key"
+      at Parser.parseErrorMessage (C:\Sistema\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Sistema\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Sistema\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      at readableAddChunk (node:internal/streams/readable:297:9)
+      at Socket.Readable.push (node:internal/streams/readable:234:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 223,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key ("billNumber")=(00016-00068616) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'bills',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'bills_billNumber_key',
+    file: 'nbtinsert.c',
+    line: '649',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "bills" ("id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId","liquidationId";',
+    parameters: [
+      '00016-00068616',
+      'C',
+      'Factura',
+      '1651',
+      '1234',
+      '2',
+      '1234',
+      '2023-01-30 00:00:00.000 +00:00',
+      '2023-01-30 15:38:17.909 +00:00',
+      false,
+      407
+    ]
+  },
+  sql: 'INSERT INTO "bills" ("id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING "id","billNumber","billType","registerType","description","initialAmount","adminExpenses","finalAmount","billDate","createdAt","state","personId","liquidationId";'
+}

@@ -1,5 +1,6 @@
 const boom = require("@hapi/boom");
 const { models } = require("../libs/sequelize");
+const moment = require("moment");
 const fs = require("fs");
 
 class BillService {
@@ -31,7 +32,16 @@ class BillService {
       include: ["person"],
       order: [["createdAt", "DESC"]],
     });
-    return rta;
+    const newRes = [];
+    rta.map((res) => {
+      console.log(res.dataValues);
+      newRes.push({
+        ...res.dataValues,
+        billDate: new Date(moment(res.billDate).add(7, "hours")),
+      });
+    });
+
+    return newRes;
   }
 
   async findOne(id) {
