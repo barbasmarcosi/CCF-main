@@ -180,7 +180,7 @@ class LiquidationService {
             total + prevLiqAmount > newMaxAllowed
           ) {
             retainedAmount =
-              (total + prevLiqAmount -  newMaxAllowed) *
+              (total + prevLiqAmount - newMaxAllowed) *
               retentionMonth[0].retention;
             retention = retentionPercentage;
           } else {
@@ -225,8 +225,10 @@ class LiquidationService {
       to = new Date(secondSplit[0], secondSplit[1], 16);
     } else {
       from = new Date(secondSplit[0], secondSplit[1], 16);
-      to = new Date(secondSplit[0], Number(secondSplit[1]) + 1, 0);
+      to = new Date(moment(new Date(secondSplit[0], Number(secondSplit[1]) + 1, 0)).add(24, "hours"));
     }
+    
+    console.log(from, to);
     const liquidations = await models.Liquidation.findAll({
       include: ["person"],
     });
@@ -273,7 +275,7 @@ class LiquidationService {
         await fs.writeFileSync(`${txtPath}.txt`, txt);
         return true;
       } catch (e) {
-         // console.log("Cannot write file ", e);
+        // console.log("Cannot write file ", e);
         return false;
       }
     };
@@ -519,7 +521,7 @@ class LiquidationService {
                        retention.billNumber
                      }</td>
                      <td style="border: 1px solid black;" >${new Date(
-                       moment(retention.billDate).add(7, 'hours')
+                       moment(retention.billDate).add(7, "hours")
                      ).toLocaleDateString()}</td>
                      <td style="border: 1px solid black;" >$${
                        retention.initialAmount
