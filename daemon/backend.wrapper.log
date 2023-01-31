@@ -98,3 +98,21 @@ Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2023-01-30 12:43:47 - Send SIGINT 15488
 2023-01-30 12:43:47 - SIGINT to 15488 failed - Killing as fallback
 2023-01-30 12:43:47 - Finished backend.exe
+2023-01-31 07:14:13 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-31 07:14:13 - Started 133136
+2023-01-31 07:27:53 - Stopping backend.exe
+2023-01-31 07:27:53 - ProcessKill 133136
+2023-01-31 07:27:55 - Found child process: 134048 Name: conhost.exe
+2023-01-31 07:27:55 - Found child process: 138632 Name: node.exe
+2023-01-31 07:27:55 - Stopping process 134048
+2023-01-31 07:27:55 - Send SIGINT 134048
+2023-01-31 07:27:55 - SIGINT to 134048 failed - Killing as fallback
+2023-01-31 07:27:55 - Stopping process 138632
+2023-01-31 07:27:55 - Send SIGINT 138632
+2023-01-31 07:27:55 - SIGINT to 138632 failed - Killing as fallback
+2023-01-31 07:27:55 - Stopping process 133136
+2023-01-31 07:27:55 - Send SIGINT 133136
+2023-01-31 07:27:55 - SIGINT to 133136 failed - Killing as fallback
+2023-01-31 07:27:55 - Finished backend.exe
+2023-01-31 08:09:19 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-31 08:09:19 - Started 46344

@@ -34,7 +34,6 @@ class BillService {
     });
     const newRes = [];
     rta.map((res) => {
-      console.log(res.dataValues);
       newRes.push({
         ...res.dataValues,
         billDate: new Date(moment(res.billDate).add(7, "hours")),
@@ -53,7 +52,6 @@ class BillService {
   }
 
   async report(data) {
-    let response;
     const bills = await models.Bill.findAll({
       include: ["person"],
     });
@@ -144,9 +142,7 @@ class BillService {
       return await bill.update(changes);
     } else {
       if (bill.state) {
-        throw boom.notFound(
-          "No se puede modificar porque la factura se encuentra anulada"
-        );
+        return await bill.update({ ...changes, state: false });
       }
       throw boom.notFound(
         "No se puede modificar porque la factura se encuentra liquidada"
