@@ -225,9 +225,14 @@ class LiquidationService {
       to = new Date(secondSplit[0], secondSplit[1], 16);
     } else {
       from = new Date(secondSplit[0], secondSplit[1], 16);
-      to = new Date(moment(new Date(secondSplit[0], Number(secondSplit[1]) + 1, 0)).add(24, "hours"));
+      to = new Date(
+        moment(new Date(secondSplit[0], Number(secondSplit[1]) + 1, 0)).add(
+          24,
+          "hours"
+        )
+      );
     }
-    
+
     console.log(from, to);
     const liquidations = await models.Liquidation.findAll({
       include: ["person"],
