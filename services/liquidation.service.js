@@ -537,9 +537,9 @@ class LiquidationService {
                      <td style="border: 1px solid black;" >$${
                        retention.finalAmount
                      }</td>
-                     <td style="border: 1px solid black;" >${
-                       retention.adminExpenses
-                     }%</td>
+                     <td style="border: 1px solid black;" >$${
+                       (retention.adminExpenses / 100) * retention.finalAmount
+                     }</td>
                      <td style="border: 1px solid black;" >$${(
                        retention.finalAmount *
                        (1 - retention.adminExpenses / 100)
