@@ -592,8 +592,7 @@ class LiquidationService {
                 <td></td>
                 <td>$${(
                   report.monthAmount -
-                  report.retainedAmount -
-                  creditNotesAmount
+                  report.retainedAmount
                 ).toFixed(2)}</td>
               </tr>
             </tbody>
