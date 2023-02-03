@@ -1482,3 +1482,119 @@ ConnectionError [SequelizeConnectionError]: Connection terminated unexpectedly
 }
 (node:101972) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
 (Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+C:\Sistema\db\models\credit.note.model.js:50
+      model: BILL_TABLE,
+             ^
+
+ReferenceError: BILL_TABLE is not defined
+    at Object.<anonymous> (C:\Sistema\db\models\credit.note.model.js:50:14)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Sistema\db\models\index.js:5:42)
+    at Module._compile (node:internal/modules/cjs/loader:1097:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1149:10)
+
+Node.js v17.3.1
+(node:130776) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Error: El archivo de retenciones tiene mas de 3 meses de diferencia
+    at RetentionService.csvToJson (C:\Sistema\services\retention.service.js:116:13)
+    at filesToCsv (C:\Sistema\routes\retentions.router.js:55:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async putRetentions (C:\Sistema\routes\retentions.router.js:66:18)
+    at async C:\Sistema\routes\retentions.router.js:70:5
+Error: El archivo de retenciones tiene mas de 3 meses de diferencia
+    at RetentionService.csvToJson (C:\Sistema\services\retention.service.js:116:13)
+    at filesToCsv (C:\Sistema\routes\retentions.router.js:55:29)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async putRetentions (C:\Sistema\routes\retentions.router.js:66:18)
+    at async C:\Sistema\routes\retentions.router.js:70:5

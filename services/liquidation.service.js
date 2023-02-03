@@ -150,6 +150,7 @@ class LiquidationService {
       if (monthBills.length) {
         try {
           let total = 0;
+          creditNotesAmount ? (total -= creditNotesAmount) : 0;
           monthBills.map(async (bill) => {
             billsArray.push(bill.id);
             total =
@@ -157,6 +158,7 @@ class LiquidationService {
               (bill.finalAmount -
                 bill.finalAmount * (bill.adminExpenses / 100));
           });
+
           let retainedAmount;
           let retention;
           const retentionPercentage = Number(retentionMonth[0].retention * 100);
@@ -166,7 +168,7 @@ class LiquidationService {
               ? Number((maxAllowed * 100) / retentionPercentage)
               : 0;
           //console.log(monthAmount, newMaxAllowed, prevLiqAmount)
-          if (monthAmount >= newMaxAllowed && prevLiqAmount == 0) {
+          if (total >= newMaxAllowed && prevLiqAmount == 0) {
             retainedAmount =
               (total - newMaxAllowed) * retentionMonth[0].retention;
             retention = retentionPercentage;
@@ -190,7 +192,7 @@ class LiquidationService {
           if (total) {
             res = true;
             await models.Liquidation.create({
-              monthAmount: total + creditNotesAmount,
+              monthAmount: total,
               retainedAmount: retainedAmount,
               personId: data.personId,
               retention: retention,
@@ -549,12 +551,22 @@ class LiquidationService {
                 .split(",")
                 .join("")}
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Nota/s de crédito:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$-${creditNotesAmount.toFixed(2)}</td>
+              </tr>
+              <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                 <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Subtotal:</td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
                 <td> </td>
-                <td>$${report.monthAmount.toFixed(2)}</td>
+                <td>$${
+                  report.monthAmount.toFixed(2)
+                }</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                 <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Retención aplicada:</td>
@@ -573,14 +585,6 @@ class LiquidationService {
                 <td>-$${report.retainedAmount.toFixed(2)}</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Nota/s de crédito:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>$${creditNotesAmount.toFixed(2)}</td>
-              </tr>
-              <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                 <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Total:</td>
                 <td></td>
                 <td></td>
@@ -588,7 +592,7 @@ class LiquidationService {
                 <td></td>
                 <td>$${(
                   report.monthAmount -
-                  report.retainedAmount +
+                  report.retainedAmount -
                   creditNotesAmount
                 ).toFixed(2)}</td>
               </tr>
