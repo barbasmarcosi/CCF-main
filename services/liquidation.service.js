@@ -150,13 +150,25 @@ class LiquidationService {
       if (monthBills.length) {
         try {
           let total = 0;
-          creditNotesAmount ? (total -= creditNotesAmount) : 0;
+          //creditNotesAmount ? (total -= creditNotesAmount) : 0;
           monthBills.map(async (bill) => {
+            const billCreditNotes = pendentCreditNotes.filter(
+              (creditNote) => creditNote.description == bill.billNumber
+            );
+            let billCreditNotesAmount = 0;
+            if (billCreditNotes.length) {
+              billCreditNotesAmount = billCreditNotes.reduce(
+                (a, b) => a + Number(b.amount),
+                0
+              );
+            }
             billsArray.push(bill.id);
             total =
               total +
               (bill.finalAmount -
-                bill.finalAmount * (bill.adminExpenses / 100));
+                billCreditNotesAmount -
+                (bill.finalAmount - billCreditNotesAmount) *
+                  (bill.adminExpenses / 100));
           });
 
           let retainedAmount;
@@ -518,11 +530,23 @@ class LiquidationService {
               <th style="border: 1px solid black; font-size: 16px;">Importe luego de impuestos</th>
               <th style="border: 1px solid black; font-size: 16px;">Tipo de factura</th>
               <th style="border: 1px solid black; font-size: 16px;">Importe antes de impuestos</th>
+              <th style="border: 1px solid black; font-size: 16px;">Notas de credito</th>
+              <th style="border: 1px solid black; font-size: 16px;">Importe luego de notas de credito</th>
               <th style="border: 1px solid black; font-size: 16px;">Gastos administrativos</th>
               <th style="border: 1px solid black; font-size: 16px;">Importe luego de gastos administrativos</th>
             </thead>
             <tbody>
               ${`${report.retentions.map((retention) => {
+                const billCreditNotes = creditNotes.filter(
+                  (creditNote) => creditNote.description == retention.billNumber
+                );
+                let billCreditNotesAmount = 0;
+                if (billCreditNotes.length) {
+                  billCreditNotesAmount = billCreditNotes.reduce(
+                    (a, b) => a + Number(b.amount),
+                    0
+                  );
+                }
                 return `<tr style="border: 1px solid black; text-align: center; font-size: 16px;">
                      <td style="border: 1px solid black;" >${
                        retention.billNumber
@@ -539,11 +563,16 @@ class LiquidationService {
                      <td style="border: 1px solid black;" >$${
                        retention.finalAmount
                      }</td>
+                     <td style="border: 1px solid black;" >$${billCreditNotesAmount}</td>
                      <td style="border: 1px solid black;" >$${
-                       (retention.adminExpenses / 100) * retention.finalAmount
+                       retention.finalAmount - billCreditNotesAmount
+                     }</td>
+                     <td style="border: 1px solid black;" >$${
+                       (retention.adminExpenses / 100) *
+                       (retention.finalAmount - billCreditNotesAmount)
                      }</td>
                      <td style="border: 1px solid black;" >$${(
-                       retention.finalAmount *
+                       (retention.finalAmount - billCreditNotesAmount) *
                        (1 - retention.adminExpenses / 100)
                      ).toFixed(2)}</td>
                 </tr>`;
@@ -551,25 +580,15 @@ class LiquidationService {
                 .split(",")
                 .join("")}
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Nota/s de crédito:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>$-${creditNotesAmount.toFixed(2)}</td>
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=4>Subtotal:</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td>$${report.monthAmount.toFixed(2)}</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Subtotal:</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td>$${
-                  report.monthAmount.toFixed(2)
-                }</td>
-              </tr>
-              <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Retención aplicada:</td>
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=4>Retención aplicada:</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -577,7 +596,7 @@ class LiquidationService {
                 <td>${report.retention.toFixed(2)}%</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Monto retenido:</td>
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=4>Monto retenido:</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -585,15 +604,14 @@ class LiquidationService {
                 <td>-$${report.retainedAmount.toFixed(2)}</td>
               </tr>
               <tr style="border: 1px solid black; text-align: center; font-size: 16px;">
-                <td style="text-align: left; padding-left: 0.5rem;" colspan=2>Total:</td>
+                <td style="text-align: left; padding-left: 0.5rem;" colspan=4>Total:</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>$${(
-                  report.monthAmount -
-                  report.retainedAmount
-                ).toFixed(2)}</td>
+                <td>$${(report.monthAmount - report.retainedAmount).toFixed(
+                  2
+                )}</td>
               </tr>
             </tbody>
           </table>
