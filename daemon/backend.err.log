@@ -1598,3 +1598,308 @@ Error: El archivo de retenciones tiene mas de 3 meses de diferencia
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at async putRetentions (C:\Sistema\routes\retentions.router.js:66:18)
     at async C:\Sistema\routes\retentions.router.js:70:5
+(node:5532) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:8964) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:10392) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:18272) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ConnectionError [SequelizeConnectionError]: Connection terminated unexpectedly
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:188:20)
+    at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:144:18)
+    at Object.onceWrapper (node:events:509:28)
+    at Connection.emit (node:events:390:28)
+    at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+    at Socket.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21),
+  original: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+}
+ConnectionError [SequelizeConnectionError]: Connection terminated unexpectedly
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:188:20)
+    at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:144:18)
+    at Object.onceWrapper (node:events:509:28)
+    at Connection.emit (node:events:390:28)
+    at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+    at Socket.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21),
+  original: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+}
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+ConnectionError [SequelizeConnectionError]: Connection terminated unexpectedly
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:188:20)
+    at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:144:18)
+    at Object.onceWrapper (node:events:509:28)
+    at Connection.emit (node:events:390:28)
+    at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+    at Socket.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21),
+  original: Error: Connection terminated unexpectedly
+      at Connection.<anonymous> (C:\Sistema\node_modules\pg\lib\client.js:132:73)
+      at Object.onceWrapper (node:events:509:28)
+      at Connection.emit (node:events:390:28)
+      at Socket.<anonymous> (C:\Sistema\node_modules\pg\lib\connection.js:107:12)
+      at Socket.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+}
+
+Node.js v17.3.1
+(node:18404) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ConnectionError [SequelizeConnectionError]: read ECONNRESET
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:184:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  },
+  original: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+ConnectionError [SequelizeConnectionError]: read ECONNRESET
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:184:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  },
+  original: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+ConnectionError [SequelizeConnectionError]: read ECONNRESET
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:184:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  },
+  original: Error: read ECONNRESET
+      at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+
+Node.js v17.3.1
+(node:18044) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)
+C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172
+                reject(new sequelizeErrors.ConnectionRefusedError(err));
+                       ^
+
+ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED ::1:5432
+    at Client._connectionCallback (C:\Sistema\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:172:24)
+    at Client._handleErrorWhileConnecting (C:\Sistema\node_modules\pg\lib\client.js:305:19)
+    at Client._handleErrorEvent (C:\Sistema\node_modules\pg\lib\client.js:315:19)
+    at Connection.emit (node:events:390:28)
+    at Socket.reportStreamError (C:\Sistema\node_modules\pg\lib\connection.js:52:12)
+    at Socket.emit (node:events:390:28)
+    at emitErrorNT (node:internal/streams/destroy:164:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  parent: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  },
+  original: Error: connect ECONNREFUSED ::1:5432
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16) {
+    errno: -4078,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '::1',
+    port: 5432
+  }
+}
+
+Node.js v17.3.1
+(node:14840) [SEQUELIZE0002] DeprecationWarning: The logging-option should be either a function or false. Default: console.log
+(Use `node --trace-deprecation ...` to show where the warning was created)

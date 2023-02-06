@@ -168,3 +168,23 @@ Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2023-02-03 10:49:00 - Send SIGINT 123740
 2023-02-03 10:49:00 - SIGINT to 123740 failed - Killing as fallback
 2023-02-03 10:49:00 - Finished backend.exe
+2023-02-06 07:12:47 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-02-06 07:12:47 - Started 5704
+2023-02-06 12:22:55 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-02-06 12:22:55 - Started 12276
+2023-02-06 12:26:48 - Starting C:\Users\MSistemas-03\AppData\Roaming\nvm\v17.3.1\node.exe  --harmony --max_old_space_size=4096 C:\Sistema\node_modules\node-windows\lib\wrapper.js --file C:\Sistema\index.js --scriptoptions= --log "Backend wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-02-06 12:26:48 - Started 3232
+2023-02-06 12:30:38 - Stopping backend.exe
+2023-02-06 12:30:38 - ProcessKill 3232
+2023-02-06 12:30:39 - Found child process: 15732 Name: conhost.exe
+2023-02-06 12:30:39 - Found child process: 14840 Name: node.exe
+2023-02-06 12:30:39 - Stopping process 15732
+2023-02-06 12:30:39 - Send SIGINT 15732
+2023-02-06 12:30:39 - SIGINT to 15732 failed - Killing as fallback
+2023-02-06 12:30:39 - Stopping process 14840
+2023-02-06 12:30:39 - Send SIGINT 14840
+2023-02-06 12:30:39 - SIGINT to 14840 failed - Killing as fallback
+2023-02-06 12:30:39 - Stopping process 3232
+2023-02-06 12:30:39 - Send SIGINT 3232
+2023-02-06 12:30:39 - SIGINT to 3232 failed - Killing as fallback
+2023-02-06 12:30:39 - Finished backend.exe

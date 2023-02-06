@@ -153,7 +153,9 @@ class LiquidationService {
           //creditNotesAmount ? (total -= creditNotesAmount) : 0;
           monthBills.map(async (bill) => {
             const billCreditNotes = pendentCreditNotes.filter(
-              (creditNote) => creditNote.description == bill.billNumber
+              (creditNote) => {
+                console.log(creditNote.description.slice(0, 14))
+                return creditNote.description.slice(0, 14) == bill.billNumber}
             );
             let billCreditNotesAmount = 0;
             if (billCreditNotes.length) {
@@ -538,7 +540,7 @@ class LiquidationService {
             <tbody>
               ${`${report.retentions.map((retention) => {
                 const billCreditNotes = creditNotes.filter(
-                  (creditNote) => creditNote.description == retention.billNumber
+                  (creditNote) => creditNote.description.slice(0, 14) == retention.billNumber
                 );
                 let billCreditNotesAmount = 0;
                 if (billCreditNotes.length) {
@@ -565,12 +567,12 @@ class LiquidationService {
                      }</td>
                      <td style="border: 1px solid black;" >$${billCreditNotesAmount}</td>
                      <td style="border: 1px solid black;" >$${
-                       retention.finalAmount - billCreditNotesAmount
+                       (retention.finalAmount - billCreditNotesAmount).toFixed(2)
                      }</td>
-                     <td style="border: 1px solid black;" >$${
+                     <td style="border: 1px solid black;" >$${(
                        (retention.adminExpenses / 100) *
                        (retention.finalAmount - billCreditNotesAmount)
-                     }</td>
+                     ).toFixed(2)}</td>
                      <td style="border: 1px solid black;" >$${(
                        (retention.finalAmount - billCreditNotesAmount) *
                        (1 - retention.adminExpenses / 100)
